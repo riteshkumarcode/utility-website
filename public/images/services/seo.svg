@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <rect width="800" height="600" fill="#EAEAE2"/>
+  
+  <g transform="translate(70, 70)">
+    <!-- Main Dashboard Card -->
+    <rect width="660" height="460" rx="8" fill="#F8F8F4" stroke="#121512" stroke-width="2"/>
+    
+    <!-- Search Bar Top -->
+    <g transform="translate(40, 30)">
+      <rect width="580" height="46" rx="6" fill="#EAEAE2" stroke="#121512" stroke-width="1.5"/>
+      <circle cx="28" cy="23" r="8" stroke="#121512" stroke-width="2" fill="none"/>
+      <line x1="34" y1="29" x2="42" y2="37" stroke="#121512" stroke-width="2.5"/>
+      <text x="56" y="28" font-family="monospace" font-size="14" font-weight="bold" fill="#121512">commercial services near me</text>
+      <rect x="490" y="8" width="80" height="30" rx="3" fill="#121512"/>
+      <text x="530" y="27" font-family="sans-serif" font-size="11" font-weight="bold" fill="#F8F8F4" text-anchor="middle">RANK #1</text>
+    </g>
+
+    <!-- Graph Panel -->
+    <g transform="translate(40, 110)">
+      <rect width="580" height="310" rx="6" fill="#121512"/>
+      <text x="24" y="38" font-family="monospace" font-size="13" font-weight="bold" fill="#F8F8F4">ORGANIC SEARCH IMPRESSIONS &amp; CALLS</text>
+      <text x="556" y="38" font-family="monospace" font-size="12" fill="#FF5B1F" text-anchor="end">+480% GROWTH</text>
+      
+      <!-- Graph Axes -->
+      <line x1="30" y1="260" x2="550" y2="260" stroke="#3C413B" stroke-width="1.5"/>
+      
+      <!-- Growth Curve -->
+      <path d="M 30 240 Q 150 230 260 170 T 420 110 T 540 60" fill="none" stroke="#FF5B1F" stroke-width="4"/>
+      
+      <!-- Area Under Curve -->
+      <path d="M 30 240 Q 150 230 260 170 T 420 110 T 540 60 L 540 260 L 30 260 Z" fill="#FF5B1F" fill-opacity="0.12"/>
+      
+      <!-- Data Points -->
+      <circle cx="260" cy="170" r="6" fill="#F8F8F4" stroke="#FF5B1F" stroke-width="2"/>
+      <circle cx="420" cy="110" r="6" fill="#F8F8F4" stroke="#FF5B1F" stroke-width="2"/>
+      <circle cx="540" cy="60" r="7" fill="#FF5B1F" stroke="#F8F8F4" stroke-width="2"/>
+      
+      <!-- Badge on Top Point -->
+      <rect x="460" y="15" width="100" height="26" rx="3" fill="#F8F8F4"/>
+      <text x="510" y="32" font-family="monospace" font-size="11" font-weight="bold" fill="#121512" text-anchor="middle">1,420 LEADS</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <rect width="800" height="600" fill="#EAEAE2"/>
+  
+  <!-- Modern Brick / Architectural Wall -->
+  <defs>
+    <pattern id="brick" width="60" height="24" patternUnits="userSpaceOnUse">
+      <rect width="58" height="22" fill="#DFDFD7" stroke="#D5D5CB" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#brick)"/>
+
+  <!-- Studio Meeting Table & Team Silhouette -->
+  <g transform="translate(100, 100)">
+    <!-- Main Framed Glass Wall / Window -->
+    <rect width="600" height="420" rx="6" fill="#F8F8F4" stroke="#121512" stroke-width="2"/>
+    
+    <!-- Big Veltro Office Signboard -->
+    <rect x="50" y="40" width="220" height="48" rx="4" fill="#121512"/>
+    <circle cx="75" cy="64" r="8" fill="#FF5B1F"/>
+    <text x="96" y="70" font-family="monospace" font-size="18" font-weight="900" fill="#F8F8F4" letter-spacing="2">VELTRO HQ</text>
+    <text x="300" y="70" font-family="monospace" font-size="12" fill="#5B605A">UK OPERATIONS &amp; UTILITIES DESK</text>
+    
+    <!-- Table & Screen Setup -->
+    <line x1="50" y1="360" x2="550" y2="360" stroke="#121512" stroke-width="3"/>
+    
+    <!-- Laptop 1 (Dual Fuel Bill Analysis) -->
+    <g transform="translate(80, 240)">
+      <rect x="15" y="0" width="120" height="85" rx="4" fill="#121512"/>
+      <rect x="22" y="7" width="106" height="71" fill="#EAEAE2"/>
+      <rect x="30" y="16" width="60" height="8" fill="#FF5B1F"/>
+      <rect x="30" y="30" width="90" height="4" fill="#121512"/>
+      <rect x="30" y="40" width="75" height="4" fill="#121512"/>
+      <rect x="30" y="50" width="50" height="4" fill="#121512"/>
+      <!-- Keyboard base -->
+      <polygon points="0,95 15,85 135,85 150,95" fill="#3C413B"/>
+    </g>
+
+    <!-- Center Mug & Paper Notes -->
+    <g transform="translate(260, 280)">
+      <!-- Tea Mug with Signal Orange Accent -->
+      <rect x="0" y="30" width="30" height="40" rx="3" fill="#F8F8F4" stroke="#121512" stroke-width="2"/>
+      <path d="M 30 40 Q 42 50 30 60" fill="none" stroke="#121512" stroke-width="2"/>
+      <rect x="5" y="35" width="20" height="8" fill="#FF5B1F"/>
+      <!-- Bill Document -->
+      <rect x="50" y="20" width="90" height="60" rx="2" fill="#F1F1EC" stroke="#121512" stroke-width="1.5" transform="rotate(-6 50 20)"/>
+      <text x="56" y="36" font-family="monospace" font-size="7" font-weight="bold" fill="#121512" transform="rotate(-6 50 20)">HALF-HOURLY HH</text>
+    </g>
+
+    <!-- Laptop 2 (Next.js Studio Design Code) -->
+    <g transform="translate(400, 230)">
+      <rect x="15" y="0" width="130" height="95" rx="4" fill="#121512"/>
+      <rect x="22" y="7" width="116" height="81" fill="#1E231E"/>
+      <rect x="30" y="16" width="40" height="6" fill="#10B981"/>
+      <rect x="30" y="28" width="80" height="3" fill="#8B8F86"/>
+      <rect x="40" y="36" width="60" height="3" fill="#FF5B1F"/>
+      <rect x="40" y="44" width="70" height="3" fill="#F8F8F4"/>
+      <polygon points="0,105 15,95 145,95 160,105" fill="#3C413B"/>
+    </g>
+    
+    <!-- Stamp Bottom Right -->
+    <g transform="translate(360, 110)">
+      <rect width="180" height="50" rx="4" fill="#F8F8F4" stroke="#121512" stroke-width="1.5"/>
+      <text x="90" y="28" font-family="monospace" font-size="11" font-weight="bold" fill="#121512" text-anchor="middle">DIRECT PHONE LINE</text>
+      <text x="90" y="42" font-family="sans-serif" font-size="10" fill="#5B605A" text-anchor="middle">No automated phone trees</text>
+    </g>
+  </g>
+</svg>

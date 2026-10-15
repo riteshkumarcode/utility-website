@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <rect width="800" height="600" fill="#121512"/>
+  
+  <!-- Subtle Grid -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E231E" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#grid)"/>
+
+  <!-- Browser Window Mockup -->
+  <g transform="translate(80, 70)">
+    <!-- Browser Chrome -->
+    <rect width="640" height="460" rx="8" fill="#F8F8F4" stroke="#3C413B" stroke-width="2"/>
+    <path d="M 0 8 Q 0 0 8 0 L 632 0 Q 640 0 640 8 L 640 44 L 0 44 Z" fill="#E4E4DC"/>
+    <circle cx="22" cy="22" r="6" fill="#FF5B1F"/>
+    <circle cx="42" cy="22" r="6" fill="#3C413B"/>
+    <circle cx="62" cy="22" r="6" fill="#5B605A"/>
+    <!-- URL Bar -->
+    <rect x="90" y="10" width="360" height="24" rx="4" fill="#F8F8F4" stroke="#D5D5CB" stroke-width="1"/>
+    <text x="105" y="26" font-family="monospace" font-size="11" fill="#5B605A">https://yourbusiness.co.uk (98/100 Speed)</text>
+    
+    <!-- Hero Mockup inside Browser -->
+    <rect x="36" y="70" width="320" height="26" fill="#121512" rx="2"/>
+    <rect x="36" y="106" width="220" height="26" fill="#121512" rx="2"/>
+    <rect x="36" y="146" width="80" height="4" fill="#FF5B1F"/>
+    <rect x="36" y="165" width="290" height="10" fill="#8B8F86" rx="2"/>
+    <rect x="36" y="185" width="240" height="10" fill="#8B8F86" rx="2"/>
+    <rect x="36" y="215" width="130" height="38" rx="4" fill="#FF5B1F"/>
+    <text x="101" y="239" font-family="sans-serif" font-weight="bold" font-size="12" fill="#121512" text-anchor="middle">GET A QUOTE</text>
+
+    <!-- Side Inspection / Phone Preview -->
+    <g transform="translate(380, 70)">
+      <rect width="220" height="350" rx="14" fill="#121512" stroke="#5B605A" stroke-width="3"/>
+      <!-- Notch -->
+      <rect x="80" y="8" width="60" height="8" rx="4" fill="#2B302B"/>
+      <!-- Screen Content -->
+      <rect x="16" y="32" width="188" height="18" fill="#FF5B1F" rx="2"/>
+      <rect x="16" y="58" width="140" height="12" fill="#F8F8F4" rx="2"/>
+      <rect x="16" y="80" width="188" height="70" fill="#1E231E" rx="4"/>
+      <circle cx="110" cy="115" r="18" fill="#FF5B1F"/>
+      <!-- Mobile CTA -->
+      <rect x="16" y="280" width="188" height="36" rx="4" fill="#FF5B1F"/>
+      <text x="110" y="303" font-family="sans-serif" font-weight="bold" font-size="11" fill="#121512" text-anchor="middle">CALL DIRECT</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #F1F1EC;
+  --color-paper-2: #F8F8F4;
+  --color-stone: #E4E4DC;
+  --color-ink: #121512;
+  --color-ink-2: #3C413B;
+  --color-muted: #5B605A;
+  --color-line: #C9C9BF;
+  --color-line-dark: #2B302B;
+  --color-signal: #FF5B1F;
+  --color-rust: #B23A0B;
+  --color-on-dark: #F1F1EC;
+  --color-on-dark-muted: #C9CBC4;
+
+  --font-display: var(--font-archivo), sans-serif;
+  --font-sans: var(--font-plex-sans), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), monospace;
+
+  --radius-btn: 4px;
+  --radius-panel: 6px;
+}
+
+:root {
+  --paper: #F1F1EC;
+  --paper-2: #F8F8F4;
+  --stone: #E4E4DC;
+  --ink: #121512;
+  --ink-2: #3C413B;
+  --muted: #5B605A;
+  --line: #C9C9BF;
+  --line-dark: #2B302B;
+  --signal: #FF5B1F;
+  --rust: #B23A0B;
+}
+
+html {
+  background-color: #F1F1EC;
+  color: #121512;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #F1F1EC;
+  color: #121512;
+  font-family: var(--font-plex-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Accessible focus outline */
+:focus-visible {
+  outline: 2px solid #121512;
+  outline-offset: 3px;
+}
+
+.photo-slot {
+  background: repeating-linear-gradient(135deg, #D9D9D0 0 1px, #E7E7E0 1px 11px);
+}
+
+/* Keyframe animations */
+@keyframes up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes tick {
+  to { transform: translateX(-50%); }
+}
+
+@keyframes roll {
+  to { transform: translateY(-10em); }
+}
+
+@keyframes blink {
+  50% { opacity: 0.2; }
+}
+
+@keyframes grow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-28deg); }
+  50% { transform: rotate(38deg); }
+}
+
+@keyframes fill {
+  0% { width: 8%; }
+  60%, 100% { width: var(--w, 100%); }
+}
+
+.animate-up {
+  animation: up 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.animate-ticker {
+  animation: tick 45s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+.animate-blink {
+  animation: blink 1.4s ease-in-out infinite;
+}
+
+.animate-grow {
+  transform-origin: left;
+  animation: grow 1.3s cubic-bezier(0.2, 0.7, 0.2, 1) both 0.4s;
+}
+
+.animate-sway {
+  transform-origin: 12px 13px;
+  animation: sway 5s ease-in-out infinite;
+}
+
+.animate-fillbar {
+  animation: fill 3.2s cubic-bezier(0.3, 0.7, 0.2, 1) both;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
