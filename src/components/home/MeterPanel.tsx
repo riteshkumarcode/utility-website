@@ -8,7 +8,7 @@ export function MeterPanel() {
   return (
     <div className="flex flex-col gap-3 w-full">
       {/* Dark Meter Panel */}
-      <div className="bg-ink text-on-dark rounded-[6px] p-6 sm:p-7 shadow-lg">
+      <div className="bg-ink text-on-dark rounded-[6px] p-4 sm:p-7 shadow-lg overflow-hidden">
         {/* Top Header */}
         <div className="flex justify-between items-center font-mono text-[11px] uppercase tracking-[0.12em] text-[#8B8F86]">
           <span>{meterPanel.siteName}</span>
@@ -21,14 +21,14 @@ export function MeterPanel() {
         {/* Rolling Odometer Digits */}
         <div
           aria-hidden="true"
-          className="font-mono font-medium text-4xl sm:text-5xl md:text-[54px] mt-4 flex gap-1 items-baseline select-none"
+          className="font-mono font-medium text-2xl sm:text-4xl md:text-[50px] mt-4 flex gap-0.5 sm:gap-1 items-baseline select-none overflow-x-auto"
         >
-          <span className="bg-[#1E221E] px-2 py-1 rounded-[3px]">0</span>
-          <span className="bg-[#1E221E] px-2 py-1 rounded-[3px]">4</span>
-          <span className="bg-[#1E221E] px-2 py-1 rounded-[3px]">8</span>
+          <span className="bg-[#1E221E] px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-[3px]">0</span>
+          <span className="bg-[#1E221E] px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-[3px]">4</span>
+          <span className="bg-[#1E221E] px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-[3px]">8</span>
 
           {/* Slow column 3 (220s) */}
-          <span className="bg-[#1E221E] px-2 py-1 rounded-[3px] h-[1.3em] overflow-hidden inline-block align-top">
+          <span className="bg-[#1E221E] px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-[3px] h-[1.3em] overflow-hidden inline-block align-top">
             <span className="flex flex-col [animation:roll_220s_steps(10)_infinite]">
               {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
                 <span key={n}>{n}</span>
@@ -37,7 +37,7 @@ export function MeterPanel() {
           </span>
 
           {/* Medium column 2 (22s) */}
-          <span className="bg-[#1E221E] px-2 py-1 rounded-[3px] h-[1.3em] overflow-hidden inline-block align-top">
+          <span className="bg-[#1E221E] px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-[3px] h-[1.3em] overflow-hidden inline-block align-top">
             <span className="flex flex-col [animation:roll_22s_steps(10)_infinite]">
               {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
                 <span key={n}>{n}</span>
@@ -46,7 +46,7 @@ export function MeterPanel() {
           </span>
 
           {/* Fast column 1 (2.2s) in Signal Orange */}
-          <span className="bg-signal text-ink px-2 py-1 rounded-[3px] h-[1.3em] overflow-hidden inline-block align-top font-bold">
+          <span className="bg-signal text-ink px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-[3px] h-[1.3em] overflow-hidden inline-block align-top font-bold">
             <span className="flex flex-col [animation:roll_2.2s_steps(10)_infinite]">
               {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
                 <span key={n}>{n}</span>
@@ -54,7 +54,7 @@ export function MeterPanel() {
             </span>
           </span>
 
-          <span className="text-base text-[#8B8F86] ml-2 font-mono">kWh</span>
+          <span className="text-xs sm:text-base text-[#8B8F86] ml-1 sm:ml-2 font-mono">kWh</span>
         </div>
 
         {/* 4 Utility Progress Bars */}

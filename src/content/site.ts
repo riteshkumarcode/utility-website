@@ -46,8 +46,8 @@ export const siteConfig: SiteConfig = {
   redressScheme: "[Energy Ombudsman / TPI Code of Practice]",
   navLinks: [
     { label: "Home", href: "/", key: "home" },
-    { label: "Energy & utilities", href: "/services#utilities", key: "services" },
-    { label: "Digital marketing", href: "/services#digital", key: "digital" },
+    { label: "Energy & utilities", href: "/services/utilities", key: "services" },
+    { label: "Digital marketing", href: "/services/digital", key: "digital" },
     { label: "About", href: "/about", key: "about" },
     { label: "Contact", href: "/contact", key: "contact" },
   ],

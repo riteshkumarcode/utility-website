@@ -63,7 +63,7 @@ export default function RootLayout({
       lang="en-GB"
       className={`${archivo.variable} ${plexSans.variable} ${plexMono.variable} scroll-smooth`}
     >
-      <body className="min-h-screen bg-paper text-ink font-sans antialiased flex flex-col justify-between">
+      <body className="min-h-screen bg-paper text-ink font-sans antialiased flex flex-col justify-between overflow-x-hidden">
         {/* Skip to content link */}
         <a
           href="#main-content"
@@ -77,7 +77,7 @@ export default function RootLayout({
           <SiteNav />
         </div>
 
-        <main id="main-content" className="flex-1 focus:outline-none">
+        <main id="main-content" className="flex-1 focus:outline-none overflow-x-hidden">
           {children}
         </main>
 

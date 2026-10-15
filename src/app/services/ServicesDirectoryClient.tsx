@@ -118,9 +118,17 @@ export function ServicesDirectoryClient() {
                   UK Business Energy &amp; Utilities
                 </h2>
               </div>
-              <span className="font-mono text-xs text-muted tracking-wider uppercase">
-                Free Bill Audit · Paid by Supplier Commission
-              </span>
+              <div className="flex items-center gap-4">
+                <span className="font-mono text-xs text-muted tracking-wider uppercase hidden sm:inline">
+                  Free Bill Audit · Paid by Supplier Commission
+                </span>
+                <Link
+                  href="/services/utilities"
+                  className="font-mono text-xs text-signal font-bold tracking-wider uppercase hover:underline"
+                >
+                  Dedicated Hub Page →
+                </Link>
+              </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 mt-6 sm:mt-8">
@@ -186,9 +194,17 @@ export function ServicesDirectoryClient() {
                   In-House Digital Marketing &amp; Web
                 </h2>
               </div>
-              <span className="font-mono text-xs text-muted tracking-wider uppercase">
-                Bespoke Code · 100% Owned by You
-              </span>
+              <div className="flex items-center gap-4">
+                <span className="font-mono text-xs text-muted tracking-wider uppercase hidden sm:inline">
+                  Bespoke Code · 100% Owned by You
+                </span>
+                <Link
+                  href="/services/digital"
+                  className="font-mono text-xs text-emerald-700 font-bold tracking-wider uppercase hover:underline"
+                >
+                  Dedicated Hub Page →
+                </Link>
+              </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 mt-6 sm:mt-8">

@@ -22,9 +22,12 @@ export function SiteFooter() {
 
           {/* Col 2: Utilities */}
           <div className="flex flex-col gap-2.5 text-[15px]">
-            <div className="font-mono text-xs uppercase tracking-[0.12em] text-[#8B8F86] mb-1">
-              Utilities
-            </div>
+            <Link
+              href="/services/utilities"
+              className="font-mono text-xs uppercase tracking-[0.12em] text-signal font-bold hover:underline mb-1"
+            >
+              Energy &amp; Utilities Hub →
+            </Link>
             <Link
               href="/services/business-electricity"
               className="text-on-dark hover:text-signal transition-colors self-start"
@@ -53,9 +56,12 @@ export function SiteFooter() {
 
           {/* Col 3: Digital */}
           <div className="flex flex-col gap-2.5 text-[15px]">
-            <div className="font-mono text-xs uppercase tracking-[0.12em] text-[#8B8F86] mb-1">
-              Digital
-            </div>
+            <Link
+              href="/services/digital"
+              className="font-mono text-xs uppercase tracking-[0.12em] text-signal font-bold hover:underline mb-1"
+            >
+              Digital Studio Hub →
+            </Link>
             <Link
               href="/services/website-development"
               className="text-on-dark hover:text-signal transition-colors self-start"

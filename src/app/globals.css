@@ -39,6 +39,8 @@ html {
   background-color: #F1F1EC;
   color: #121512;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -48,6 +50,8 @@ body {
   font-family: var(--font-plex-sans), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 /* Accessible focus outline */

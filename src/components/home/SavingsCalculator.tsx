@@ -18,13 +18,13 @@ export function SavingsCalculator() {
   const fmt = (n: number) => Number(n).toLocaleString("en-GB");
 
   return (
-    <section id="calculator" className="max-w-[1280px] mx-auto px-6 py-16 md:py-20">
+    <section id="calculator" className="max-w-[1280px] mx-auto px-4 sm:px-6 py-12 md:py-20">
       <div className="border-2 border-ink rounded-[6px] overflow-hidden flex flex-wrap bg-paper-2">
         {/* Left Interactive Control Panel */}
-        <div className="flex-[999_1_520px] min-w-0 p-8 sm:p-12">
+        <div className="flex-[999_1_480px] min-w-0 p-5 sm:p-8 md:p-12">
           <SectionLabel>{calculator.label}</SectionLabel>
 
-          <h2 className="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl tracking-[-0.03em] leading-tight mt-3 m-0">
+          <h2 className="font-display font-extrabold text-2xl sm:text-4xl md:text-5xl tracking-[-0.03em] leading-tight mt-3 m-0 break-words">
             {calculator.h2}
           </h2>
 
@@ -36,7 +36,7 @@ export function SavingsCalculator() {
           <div
             role="group"
             aria-label="Select utility type"
-            className="inline-flex flex-wrap border-[1.5px] border-ink rounded-[4px] overflow-hidden mt-7 max-w-full"
+            className="inline-flex flex-wrap border-[1.5px] border-ink rounded-[4px] overflow-hidden mt-6 sm:mt-7 max-w-full"
           >
             {calculator.types.map((t) => {
               const isSelected = t === selectedUtility;
@@ -46,7 +46,7 @@ export function SavingsCalculator() {
                   type="button"
                   aria-pressed={isSelected}
                   onClick={() => setSelectedUtility(t)}
-                  className={`px-4 sm:px-5 py-2.5 text-sm sm:text-base font-bold border-r border-line last:border-r-0 transition-colors cursor-pointer min-h-[44px] ${
+                  className={`px-3.5 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-base font-bold border-r border-line last:border-r-0 transition-colors cursor-pointer min-h-[40px] sm:min-h-[44px] ${
                     isSelected
                       ? "bg-ink text-on-dark"
                       : "bg-transparent text-ink hover:bg-stone/50"
@@ -59,12 +59,12 @@ export function SavingsCalculator() {
           </div>
 
           {/* Range Slider */}
-          <div className="mt-9 space-y-3">
-            <div className="flex justify-between items-baseline">
-              <label htmlFor="calculator-spend-slider" className="font-bold text-base text-ink">
+          <div className="mt-8 sm:mt-9 space-y-3">
+            <div className="flex justify-between items-baseline gap-2">
+              <label htmlFor="calculator-spend-slider" className="font-bold text-sm sm:text-base text-ink">
                 Monthly {selectedUtility.toLowerCase()} spend
               </label>
-              <span className="font-mono text-2xl font-bold text-ink">
+              <span className="font-mono text-xl sm:text-2xl font-bold text-ink shrink-0">
                 £{fmt(monthlySpend)}
               </span>
             </div>
@@ -89,15 +89,15 @@ export function SavingsCalculator() {
         </div>
 
         {/* Right Output Panel */}
-        <div className="flex-[1_1_340px] min-w-0 bg-ink text-on-dark p-8 sm:p-12 flex flex-col justify-between gap-8">
+        <div className="flex-[1_1_320px] min-w-0 bg-ink text-on-dark p-5 sm:p-8 md:p-12 flex flex-col justify-between gap-6 sm:gap-8">
           <div>
             <div className="font-mono text-xs uppercase tracking-[0.14em] text-[#8B8F86]">
               Could be back in your account
             </div>
-            <div className="font-display font-extrabold text-6xl sm:text-7xl md:text-8xl text-signal tracking-[-0.03em] leading-none mt-4">
+            <div className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-signal tracking-[-0.03em] leading-none mt-4 break-words">
               £{fmt(annualSaving)}
             </div>
-            <div className="text-[#C9CBC4] text-base mt-3">
+            <div className="text-[#C9CBC4] text-sm sm:text-base mt-3">
               a year &nbsp;·&nbsp; about £{fmt(monthlySaving)} a month
             </div>
           </div>
