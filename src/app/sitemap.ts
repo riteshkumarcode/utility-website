@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { services } from "@/content/services";
 
-const baseUrl = "https://veltro.co.uk";
+const baseUrl = "https://westcoastservices.co.uk";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [

@@ -464,7 +464,7 @@ export function EnquiryForm() {
             )}
           />
           <label htmlFor="form-consent" className="text-sm text-ink-2 leading-snug cursor-pointer">
-            I&apos;m happy for Veltro to contact me regarding this enquiry. See our{" "}
+            I&apos;m happy for {siteConfig.name} to contact me regarding this enquiry. See our{" "}
             <Link href="/privacy" className="text-rust underline font-medium">
               privacy notice
             </Link>.

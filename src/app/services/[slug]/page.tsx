@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!service) {
     return {
-      title: "Service Not Found | Veltro",
+      title: "Service Not Found | West Coast Services",
     };
   }
 

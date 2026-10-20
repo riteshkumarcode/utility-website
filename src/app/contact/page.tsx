@@ -4,7 +4,7 @@ import { ContactClient } from "./ContactClient";
 import { getContactPageSchema, getBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Contact Us & Free Bill Check | Veltro",
+  title: "Contact Us & Free Bill Check | West Coast Services",
   description:
     "Send us a utility bill or request a marketing review. We reply within one working day. Plain UK advice with transparent commission disclosure.",
 };

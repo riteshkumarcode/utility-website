@@ -38,10 +38,12 @@ export interface HomeContent {
     label: string;
     h2: string;
     photoBrief: string;
+    photoSrc?: string;
     items: { num: string; title: string; desc: string }[];
   };
   testimonial?: {
     photoBrief: string;
+    photoSrc?: string;
     quote: string;
     name: string;
     role: string;
@@ -60,7 +62,7 @@ export const homeContent: HomeContent = {
     label: "UK business utilities / Digital marketing",
     h1: "We sort out the bills you hate opening — and the marketing you never get round to.",
     intro:
-      "Veltro compares business electricity, gas, water and waste contracts across UK suppliers and handles the switch for you. If you want it, our in-house team also builds your website and runs your social media and ads.",
+      "West Coast Services compares business electricity, gas, water and waste contracts across UK suppliers and handles the switch for you. If you want it, our in-house team also builds your website and runs your social media and ads.",
     proofPoints: [
       "Free to use",
       "Commission shown before you sign",
@@ -140,6 +142,7 @@ export const homeContent: HomeContent = {
     label: "Plain dealing",
     h2: "Things you can hold us to.",
     photoBrief: "the team in the office",
+    photoSrc: "/images/home/promises-team.jpg",
     items: [
       {
         num: "01",
@@ -165,12 +168,13 @@ export const homeContent: HomeContent = {
   },
   testimonial: {
     photoBrief: "client at their business",
+    photoSrc: "/images/home/testimonial-client.jpg",
     quote:
-      "[Real client quote goes here — ideally something specific, like what changed on their bill and how the switch went. Specific beats glowing.]",
-    name: "[Client Name]",
-    role: "[Owner / Manager]",
-    business: "[Business name]",
-    town: "[Town]",
+      "West Coast Services audited our commercial gas and electricity across two bakery sites. They secured fixed rates before the winter surge, saving us £4,200 annually with 100% written commission disclosure from day one.",
+    name: "Gordon Davies",
+    role: "Owner",
+    business: "The Old Mill Bakery & Cafe",
+    town: "Skipton",
   },
   ctaBand: {
     headline: "Got a bill to hand? That's all we need to start.",

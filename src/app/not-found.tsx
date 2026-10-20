@@ -1,5 +1,6 @@
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Button } from "@/components/ui/Button";
+import { siteConfig } from "@/content/site";
 
 export default function NotFound() {
   return (
@@ -23,7 +24,11 @@ export default function NotFound() {
       </div>
 
       <div className="mt-16 pt-8 border-t border-line text-xs font-mono text-muted">
-        Need assistance? Call our UK office on [0000 000 0000].
+        Need assistance? Call our UK office on{" "}
+        <a href={`tel:${siteConfig.phone.replace(/[^0-9+]/g, "")}`} className="text-ink font-bold underline hover:text-signal">
+          {siteConfig.phone}
+        </a>
+        .
       </div>
     </div>
   );

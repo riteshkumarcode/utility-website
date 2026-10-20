@@ -43,3 +43,7 @@ extracted_design/
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# hostinger packaging
+/hostinger_deploy/
+*.zip

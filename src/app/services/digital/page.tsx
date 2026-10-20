@@ -8,7 +8,7 @@ import { Arrow } from "@/components/ui/Arrow";
 import { getBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing & Web Development Studio | Veltro UK",
+  title: "Digital Marketing & Web Development Studio | West Coast Services UK",
   description:
     "Tailored digital growth for UK businesses: fast Next.js websites, organic social management, local SEO, and ROI-focused Google Ads. Clear deliverables, no lock-ins.",
 };

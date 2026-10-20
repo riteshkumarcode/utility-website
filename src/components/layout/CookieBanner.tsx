@@ -9,7 +9,7 @@ export function CookieBanner() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      const consent = localStorage.getItem("veltro_cookie_consent");
+      const consent = localStorage.getItem("westcoastservices_cookie_consent") || localStorage.getItem("veltro_cookie_consent");
       if (!consent) {
         setShow(true);
       }
@@ -19,7 +19,7 @@ export function CookieBanner() {
 
   const handleConsent = (accepted: boolean) => {
     localStorage.setItem(
-      "veltro_cookie_consent",
+      "westcoastservices_cookie_consent",
       JSON.stringify({
         accepted,
         timestamp: new Date().toISOString(),
@@ -27,7 +27,7 @@ export function CookieBanner() {
     );
     if (typeof window !== "undefined") {
       window.dispatchEvent(
-        new CustomEvent("veltro-consent-update", { detail: { accepted } })
+        new CustomEvent("westcoastservices-consent-update", { detail: { accepted } })
       );
     }
     setShow(false);

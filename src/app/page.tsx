@@ -12,7 +12,7 @@ import { Reveal } from "@/components/shared/Reveal";
 import { getOrganizationSchema, getLocalBusinessSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Veltro — Business Utilities & Digital Marketing | UK Energy Broker",
+  title: "West Coast Services — Business Utilities & Digital Marketing | UK Energy Broker",
   description:
     "We sort out the bills you hate opening — and the marketing you never get round to. Whole-of-market business electricity, gas, water & waste comparison.",
 };

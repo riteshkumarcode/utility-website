@@ -5,9 +5,11 @@ import Script from "next/script";
 
 function subscribe(callback: () => void) {
   if (typeof window === "undefined") return () => {};
+  window.addEventListener("westcoastservices-consent-update", callback);
   window.addEventListener("veltro-consent-update", callback);
   window.addEventListener("storage", callback);
   return () => {
+    window.removeEventListener("westcoastservices-consent-update", callback);
     window.removeEventListener("veltro-consent-update", callback);
     window.removeEventListener("storage", callback);
   };
@@ -16,7 +18,9 @@ function subscribe(callback: () => void) {
 function getSnapshot(): boolean {
   if (typeof window === "undefined") return false;
   try {
-    const stored = localStorage.getItem("veltro_cookie_consent");
+    const stored =
+      localStorage.getItem("westcoastservices_cookie_consent") ||
+      localStorage.getItem("veltro_cookie_consent");
     if (stored) {
       const parsed = JSON.parse(stored);
       return parsed.accepted === true;

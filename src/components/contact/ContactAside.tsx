@@ -18,12 +18,26 @@ export function ContactAside() {
           {siteConfig.phone}
         </a>
 
-        <a
-          href={`mailto:${siteConfig.email}`}
-          className="inline-block text-on-dark text-base hover:text-signal transition-colors underline"
-        >
-          {siteConfig.email}
-        </a>
+        <div className="flex flex-col gap-2 pt-1 font-mono text-xs sm:text-sm">
+          <div className="flex flex-wrap items-baseline gap-2">
+            <span className="text-[#8B8F86] uppercase tracking-wider text-[11px]">Enquiries:</span>
+            <a
+              href={`mailto:${siteConfig.email}`}
+              className="text-on-dark hover:text-signal transition-colors underline"
+            >
+              {siteConfig.email}
+            </a>
+          </div>
+          <div className="flex flex-wrap items-baseline gap-2">
+            <span className="text-[#8B8F86] uppercase tracking-wider text-[11px]">Sales:</span>
+            <a
+              href={`mailto:${siteConfig.salesEmail}`}
+              className="text-on-dark hover:text-signal transition-colors underline"
+            >
+              {siteConfig.salesEmail}
+            </a>
+          </div>
+        </div>
 
         <div className="border-t border-line-dark pt-5 text-sm space-y-2 text-[#C9CBC4]">
           <div className="flex justify-between">
@@ -64,10 +78,12 @@ export function ContactAside() {
         </ol>
       </div>
 
-      {/* Map Slot */}
+      {/* Office Premises Photo */}
       <PhotoSlot
+        src="/images/contact/office-premises.jpg"
+        alt={`West Coast Services commercial office premises in ${siteConfig.address.town}`}
         brief={`office premises in ${siteConfig.address.town}, ${siteConfig.address.county}`}
-        className="h-52 w-full"
+        className="h-52 w-full border border-line shadow-sm"
       />
     </aside>
   );

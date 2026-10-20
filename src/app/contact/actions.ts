@@ -134,12 +134,17 @@ export async function submitEnquiry(formData: FormData): Promise<ServerActionRes
 
     // 6. Send emails via Resend
     const resendApiKey = process.env.RESEND_API_KEY;
-    const enquiryTo =
-      process.env.ENQUIRY_TO || process.env.RESEND_TO_EMAIL || siteConfig.email;
+    const enquiryTo: string[] = process.env.ENQUIRY_TO
+      ? process.env.ENQUIRY_TO.split(",").map((s) => s.trim())
+      : [
+          "info@westcoastservices.co.uk",
+          "sales@westcoastservices.co.uk",
+          "sales@wedtcoastservices.co.uk",
+        ];
     const enquiryFrom =
       process.env.ENQUIRY_FROM ||
       process.env.RESEND_FROM_EMAIL ||
-      `Veltro Enquiries <enquiries@${siteConfig.name.toLowerCase()}.co.uk>`;
+      `${siteConfig.name} Enquiries <enquiries@westcoastservices.co.uk>`;
 
     if (resendApiKey) {
       const resend = new Resend(resendApiKey);

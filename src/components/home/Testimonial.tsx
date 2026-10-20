@@ -14,8 +14,10 @@ export function Testimonial() {
         {/* Photo slot */}
         <div className="flex-[1_1_320px] min-w-0">
           <PhotoSlot
+            src={testimonial.photoSrc}
+            alt={`${testimonial.name}, owner of ${testimonial.business} in ${testimonial.town}`}
             brief={testimonial.photoBrief}
-            className="h-[360px] md:h-[400px] w-full"
+            className="h-[360px] md:h-[400px] w-full border-2 border-ink shadow-md"
           />
         </div>
 

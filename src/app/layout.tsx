@@ -29,25 +29,25 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://veltro.co.uk"),
+  metadataBase: new URL("https://westcoastservices.co.uk"),
   title: {
-    default: "Veltro — Business Utilities & Digital Marketing | UK Energy Broker",
-    template: "%s | Veltro",
+    default: "West Coast Services — Business Utilities & Digital Marketing | UK Energy Broker",
+    template: "%s | West Coast Services",
   },
   description:
     "We sort out the bills you hate opening — and the marketing you never get round to. Business energy, water and waste comparison across the UK.",
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: "https://veltro.co.uk",
-    siteName: "Veltro",
-    title: "Veltro — Business Utilities & Digital Marketing",
+    url: "https://westcoastservices.co.uk",
+    siteName: "West Coast Services",
+    title: "West Coast Services — Business Utilities & Digital Marketing",
     description:
       "Whole-of-market business electricity, gas, water & waste comparison. In-house web design, SEO, and paid ads.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Veltro — Business Utilities & Digital Marketing",
+    title: "West Coast Services — Business Utilities & Digital Marketing",
     description:
       "Whole-of-market business electricity, gas, water & waste comparison. In-house web design, SEO, and paid ads.",
   },

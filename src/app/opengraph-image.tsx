@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Veltro — Business Utilities & Digital Marketing";
+export const alt = "West Coast Services — Business Utilities & Digital Marketing";
 export const size = {
   width: 1200,
   height: 630,
@@ -78,7 +78,7 @@ export default function Image() {
             fontFamily: "monospace",
           }}
         >
-          <span style={{ color: "#F1F1EC", fontWeight: "bold" }}>VELTRO.CO.UK</span>
+          <span style={{ color: "#F1F1EC", fontWeight: "bold" }}>WESTCOASTSERVICES.CO.UK</span>
           <span>ELECTRICITY · GAS · WATER · WASTE · WEB · SEO</span>
         </div>
       </div>

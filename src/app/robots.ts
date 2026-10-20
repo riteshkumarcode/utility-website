@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/style-guide"],
     },
-    sitemap: "https://veltro.co.uk/sitemap.xml",
+    sitemap: "https://westcoastservices.co.uk/sitemap.xml",
   };
 }

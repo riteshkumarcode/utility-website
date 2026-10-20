@@ -6,6 +6,7 @@ export interface SiteConfig {
   icoNumber?: string;
   phone: string;
   email: string;
+  salesEmail: string;
   openingHours: string;
   openingHoursSchema: string;
   address: {
@@ -25,13 +26,14 @@ export interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  name: "Veltro",
-  legalName: "[Registered company name] Ltd",
+  name: "West Coast Services",
+  legalName: "West Coast Services Ltd",
   companyNumber: "[00000000]",
   vatNumber: "[GB 000 0000 00]",
   icoNumber: "[ZB000000]",
-  phone: "[0000 000 0000]",
-  email: "[hello@yourdomain.co.uk]",
+  phone: "+44 7854 404164",
+  email: "info@westcoastservices.co.uk",
+  salesEmail: "sales@westcoastservices.co.uk",
   openingHours: "Mon–Fri, 08:30–17:30",
   openingHoursSchema: "Mo-Fr 08:30-17:30",
   address: {
@@ -42,7 +44,7 @@ export const siteConfig: SiteConfig = {
     country: "United Kingdom",
   },
   commissionStatement:
-    "We are paid commission by energy suppliers. We disclose it before you sign. [Client to confirm wording]",
+    "We are paid commission by energy suppliers. We disclose it before you sign.",
   redressScheme: "[Energy Ombudsman / TPI Code of Practice]",
   navLinks: [
     { label: "Home", href: "/", key: "home" },

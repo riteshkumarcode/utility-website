@@ -28,7 +28,7 @@ app
         process.exit(1);
       })
       .listen(port, () => {
-        console.log(`> Veltro production server running on http://${hostname}:${port}`);
+        console.log(`> West Coast Services production server running on http://${hostname}:${port}`);
       });
   })
   .catch((err) => {

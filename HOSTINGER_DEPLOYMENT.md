@@ -1,141 +1,97 @@
-# Hostinger Node.js Web App Deployment Guide
+# Hostinger Deployment Guide — West Coast Services
 
-This guide explains how to deploy the Veltro Next.js application on **Hostinger Web App Node.js server** using your GitHub repository:
-`https://github.com/riteshkumarcode/utility-website.git`
+This guide explains how to deploy the **West Coast Services** Next.js web application on **Hostinger**.
 
----
-
-## 1. Project Architecture for Hostinger
-
-Hostinger's Node.js application manager requires an explicit Node.js startup file that listens to the host-assigned port. This repository includes:
-
-- **`server.js`**: Custom production server that reads `process.env.PORT` (or default 3000) and binds to `0.0.0.0`.
-- **`package.json`**: `"scripts": { "build": "next build", "start": "node server.js" }`.
-- **`public/`**: All images, icons, and static assets.
+We have prepared a self-contained, pre-compiled standalone zip file:
+📁 **`westcoastservices-hostinger.zip`** (located directly in your project root folder: `d:\Ashish website\westcoastservices-hostinger.zip`).
 
 ---
 
-## 2. Option A: Hostinger Cloud / Shared Web Hosting (hPanel Node.js Selector)
+## Method 1: Upload via Hostinger File Manager (Fastest & Easiest — Recommended)
 
-If you are using Hostinger Cloud or Web Hosting with the **Node.js Web App** feature in hPanel:
+Because Next.js is pre-compiled into a self-contained standalone bundle, **you do not need to run `npm install` or `npm run build` on Hostinger**.
 
-### Step 1: Connect GitHub Repository
-1. Log into your **Hostinger hPanel**.
-2. Go to **Websites** → select your domain → **Manage**.
-3. In the search bar or under **Advanced**, click **Git**.
-4. Fill in the repository details:
+### Step 1: Upload the Zip File
+1. Log into your **Hostinger hPanel** (https://hpanel.hostinger.com).
+2. Go to **Websites** → click **Manage** next to your domain.
+3. In the sidebar or search bar, open **File Manager** (Files → File Manager).
+4. Navigate inside the **`public_html`** directory.
+5. Click the **Upload** button (top right) → select **File** → choose:
+   `westcoastservices-hostinger.zip`
+6. Once uploaded, right-click `westcoastservices-hostinger.zip` and select **Extract**.
+7. Extract the files directly into `public_html`.
+   *(You should see `server.js`, `package.json`, `.next`, `node_modules`, and `public` inside `public_html`)*.
+8. Delete the `.zip` file after extraction to save disk space.
+
+---
+
+### Step 2: Configure Node.js in Hostinger hPanel
+1. In hPanel, search for **Node.js** in the search bar (or go to **Advanced** → **Node.js** / **Web Apps**).
+2. Click **Create Application** (or **Edit** if already created):
+   - **Node.js version**: Select **20.x** (or **22.x**).
+   - **Application mode**: `Production`.
+   - **Application root**: `public_html` (or leave default `/`).
+   - **Application startup file**: `server.js` *(Crucial: enter `server.js`)*.
+   - **Application URL**: Select your domain (e.g. `westcoastservices.co.uk`).
+
+---
+
+### Step 3: Add Environment Variables
+In the same Node.js configuration screen, under **Environment Variables**, click **Add Variable**:
+
+| Variable Name | Recommended Value | Notes |
+| :--- | :--- | :--- |
+| `NODE_ENV` | `production` | Enables production caching |
+| `ENQUIRY_TO` | `info@westcoastservices.co.uk, sales@westcoastservices.co.uk` | Inboxes where form submissions are sent |
+| `ENQUIRY_FROM` | `West Coast Services <enquiries@westcoastservices.co.uk>` | Verified sender address |
+| `RESEND_API_KEY` | `re_your_api_key_here` | Your API key from [resend.com](https://resend.com) |
+| `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | *(optional)* | Cloudflare Turnstile anti-spam key |
+| `TURNSTILE_SECRET_KEY` | *(optional)* | Cloudflare Turnstile secret key |
+| `NEXT_PUBLIC_GA_ID` | *(optional)* | Google Analytics GA4 ID |
+
+---
+
+### Step 4: Start the Application
+1. Click **Save** / **Create Application**.
+2. Click **Start Application** (or **Restart**).
+3. Open your domain in your browser — your **West Coast Services** website is now live!
+
+---
+
+## Method 2: Deploying via GitHub on Hostinger
+
+If you prefer connecting your GitHub repository for automated Git deployments:
+
+1. In Hostinger hPanel, go to **Advanced** → **Git**.
+2. Fill in:
    - **Repository URL**: `https://github.com/riteshkumarcode/utility-website.git`
    - **Branch**: `main`
-   - **Install in**: `public_html` (or your chosen subdirectory)
-5. Click **Create**.
-6. Click **Deploy** to pull the latest code.
-
-### Step 2: Configure the Node.js Web App
-1. In hPanel, navigate to **Advanced** → **Node.js** (or **Web Apps** → **Node.js**).
-2. Click **Create Application** (or Edit existing):
-   - **Node.js version**: Select **20.x** (or 22.x).
-   - **Application mode**: `Production`.
-   - **Application root**: `public_html` (where your repo is installed).
-   - **Application startup file**: `server.js` *(Crucial: do not leave blank)*.
-3. Under **Environment variables**, click **Add Variable**:
-   - `NODE_ENV`: `production`
-   - `PORT`: (Leave blank if Hostinger auto-assigns, or set to Hostinger's assigned port)
-   - `RESEND_API_KEY`: `re_your_api_key_here`
-   - `RESEND_FROM_EMAIL`: `Veltro <quotes@veltro.co.uk>`
-   - `RESEND_TO_EMAIL`: `enquiries@veltro.co.uk`
-   - `NEXT_PUBLIC_TURNSTILE_SITE_KEY`: (optional)
-   - `TURNSTILE_SECRET_KEY`: (optional)
-   - `NEXT_PUBLIC_GA_ID`: (optional)
-4. Click **Save** / **Create**.
-
-### Step 3: Install Dependencies & Build
-In the Node.js panel:
-1. Click **NPM Install** (or access terminal via SSH and run `npm install`).
-2. Run the build script:
-   - Either click **Run Script** → `build`
-   - Or in SSH terminal inside `public_html`:
-     ```bash
-     npm run build
-     ```
-3. Once the build finishes (`✓ Compiled successfully`), click **Restart Application**.
-
-Your site will now be live on your Hostinger domain!
+   - **Install directory**: `public_html`
+3. Click **Create** and then **Deploy**.
+4. In hPanel, go to **Advanced** → **Node.js**:
+   - Set **Startup file**: `server.js`.
+   - Click **NPM Install**.
+   - In terminal or via script, run `npm run build`.
+   - Click **Restart Application**.
 
 ---
 
-## 3. Option B: Hostinger VPS (Ubuntu / Debian with PM2 & NGINX)
+## How to Re-generate the Zip File Locally (If You Make Future Changes)
 
-If you are using a Hostinger VPS:
+If you make changes to the code in the future and want to generate an updated zip package:
 
-### Step 1: Connect via SSH
-```bash
-ssh root@your_hostinger_vps_ip
-```
-
-### Step 2: Install Node.js 20 & PM2 (if not already installed)
-```bash
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-sudo apt-get install -y nodejs git
-sudo npm install -g pm2
-```
-
-### Step 3: Clone Repository
-```bash
-cd /var/www
-git clone https://github.com/riteshkumarcode/utility-website.git veltro
-cd veltro
-```
-
-### Step 4: Configure Environment & Build
-1. Create `.env`:
+1. Run the build in terminal:
    ```bash
-   cp .env.example .env
-   nano .env
-   ```
-   Add your Resend API keys and domain details.
-2. Install and build:
-   ```bash
-   npm install
    npm run build
    ```
-
-### Step 5: Start with PM2
-```bash
-pm2 start server.js --name "veltro"
-pm2 save
-pm2 startup
-```
-
-### Step 6: Configure NGINX Reverse Proxy
-In `/etc/nginx/sites-available/veltro`:
-```nginx
-server {
-    server_name veltro.co.uk www.veltro.co.uk;
-
-    location / {
-        proxy_pass http://127.0.0.1:3000;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection 'upgrade';
-        proxy_set_header Host $host;
-        proxy_cache_bypass $http_upgrade;
-    }
-}
-```
-Enable site and restart NGINX:
-```bash
-sudo ln -s /etc/nginx/sites-available/veltro /etc/nginx/sites-enabled/
-sudo nginx -t && sudo systemctl restart nginx
-sudo certbot --nginx -d veltro.co.uk -d www.veltro.co.uk
-```
-
----
-
-## 4. Automatic Deployments from GitHub
-
-Whenever you push changes to `main` on GitHub:
-- On **hPanel**: Go to **Git** → click **Deploy**. Then in the Node.js tab, click **Restart**.
-- On **VPS**: Set up a GitHub Action or run:
-  ```bash
-  cd /var/www/veltro && git pull && npm run build && pm2 restart veltro
-  ```
+2. Run the deployment packager in PowerShell:
+   ```powershell
+   Remove-Item -Recurse -Force hostinger_deploy -ErrorAction SilentlyContinue
+   New-Item -ItemType Directory -Path hostinger_deploy -Force
+   Copy-Item -Recurse -Force .next\standalone\* hostinger_deploy\
+   New-Item -ItemType Directory -Path hostinger_deploy\.next\static -Force
+   Copy-Item -Recurse -Force .next\static\* hostinger_deploy\.next\static\
+   Copy-Item -Recurse -Force public hostinger_deploy\
+   Compress-Archive -Path 'hostinger_deploy\*' -DestinationPath 'westcoastservices-hostinger.zip' -Force
+   ```
+   This immediately creates a fresh `westcoastservices-hostinger.zip` ready for upload.

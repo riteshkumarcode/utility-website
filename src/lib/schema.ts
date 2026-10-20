@@ -1,7 +1,7 @@
 import { siteConfig } from "@/content/site";
 import { Service } from "@/content/services";
 
-const siteUrl = "https://veltro.co.uk"; // Canonical production domain
+const siteUrl = "https://westcoastservices.co.uk"; // Canonical production domain
 
 // 1. Organization Schema
 export function getOrganizationSchema() {

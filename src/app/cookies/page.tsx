@@ -3,8 +3,8 @@ import { siteConfig } from "@/content/site";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy | Veltro",
-  description: "Information about how Veltro uses cookies in compliance with UK GDPR and PECR.",
+  title: "Cookie Policy | West Coast Services",
+  description: "Information about how West Coast Services uses cookies in compliance with UK GDPR and PECR.",
 };
 
 export default function CookiePage() {
@@ -42,7 +42,7 @@ export default function CookiePage() {
               </thead>
               <tbody className="divide-y divide-line">
                 <tr>
-                  <td className="p-3 font-mono font-bold border-r border-line">veltro_cookie_consent</td>
+                  <td className="p-3 font-mono font-bold border-r border-line">westcoastservices_cookie_consent</td>
                   <td className="p-3 border-r border-line">Strictly Necessary</td>
                   <td className="p-3 border-r border-line">Remembers your choice on the cookie banner</td>
                   <td className="p-3">6 months</td>

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
+import { motion, useReducedMotion } from "motion/react";
 import { Service } from "@/content/services";
 import { siteConfig } from "@/content/site";
 import { SectionLabel } from "@/components/ui/SectionLabel";
@@ -162,24 +163,53 @@ export function UtilityServiceDetail({
           </div>
 
           <p className="text-ink-2 text-sm sm:text-base mt-4 max-w-3xl leading-relaxed">
-            Many energy brokers add silent 2p to 4p per kWh markups onto your rates. At Veltro, our commission is declared in pounds and pence before you sign any contract, keeping your unit rates tied directly to true wholesale supplier costs.
+            Many energy brokers add silent 2p to 4p per kWh markups onto your rates. At {siteConfig.name}, our commission is declared in pounds and pence before you sign any contract, keeping your unit rates tied directly to true wholesale supplier costs.
           </p>
 
-          {/* Visual Bar Breakdown */}
+          {/* Visual Bar Breakdown with Motion */}
           <div className="mt-8 space-y-3">
-            <div className="h-7 w-full rounded-[4px] overflow-hidden flex text-[10px] sm:text-xs font-mono font-bold text-center text-on-dark border border-ink">
-              <div className="bg-ink flex items-center justify-center w-[54%]" title="Wholesale Energy 54%">
+            <div className="h-8 w-full rounded-[4px] overflow-hidden flex text-[10px] sm:text-xs font-mono font-bold text-center text-on-dark border border-ink">
+              <motion.div
+                initial={{ width: 0 }}
+                whileInView={{ width: "54%" }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.1, ease: [0.2, 0.7, 0.2, 1] }}
+                className="bg-ink flex items-center justify-center border-r border-line-dark/40 overflow-hidden"
+                title="Wholesale Energy 54%"
+              >
                 Wholesale (54%)
-              </div>
-              <div className="bg-[#3C413B] flex items-center justify-center w-[23%]" title="Network DUoS 23%">
+              </motion.div>
+              <motion.div
+                initial={{ width: 0 }}
+                whileInView={{ width: "23%" }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.1, delay: 0.15, ease: [0.2, 0.7, 0.2, 1] }}
+                className="bg-[#3C413B] flex items-center justify-center border-r border-line-dark/40 overflow-hidden"
+                title="Network DUoS 23%"
+              >
                 Network (23%)
-              </div>
-              <div className="bg-[#5B605A] flex items-center justify-center w-[19%]" title="Levies CCL 19%">
+              </motion.div>
+              <motion.div
+                initial={{ width: 0 }}
+                whileInView={{ width: "19%" }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.1, delay: 0.3, ease: [0.2, 0.7, 0.2, 1] }}
+                className="bg-[#5B605A] flex items-center justify-center border-r border-line-dark/40 overflow-hidden"
+                title="Levies CCL 19%"
+              >
                 Levies (19%)
-              </div>
-              <div className="bg-signal text-ink flex items-center justify-center w-[4%]" title="Veltro Fee ~4%">
-                Fee
-              </div>
+              </motion.div>
+              <motion.div
+                initial={{ width: 0 }}
+                whileInView={{ width: "4%" }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.1, delay: 0.45, ease: [0.2, 0.7, 0.2, 1] }}
+                className="bg-signal text-ink flex items-center justify-center overflow-hidden font-extrabold relative group cursor-pointer"
+                title={`${siteConfig.name} Fee ~4%`}
+              >
+                <span className="relative z-10">Fee</span>
+                <span className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </motion.div>
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4 pt-2 text-xs font-mono">
@@ -197,7 +227,7 @@ export function UtilityServiceDetail({
               </div>
               <div className="flex items-center gap-2">
                 <span className="w-3 h-3 bg-signal rounded-xs shrink-0" />
-                <span className="font-bold text-ink">Veltro Fee (Agreed)</span>
+                <span className="font-bold text-ink">{siteConfig.name} Fee (Agreed)</span>
               </div>
             </div>
           </div>

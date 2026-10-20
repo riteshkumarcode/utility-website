@@ -59,7 +59,7 @@ export function StyleGuideClient() {
         <div className="max-w-[1280px] mx-auto px-6 py-12">
           <SectionLabel>Design System Specification</SectionLabel>
           <h1 className="font-display font-extrabold text-5xl md:text-7xl tracking-[-0.035em] mt-4 leading-none">
-            Veltro Design Tokens &amp; Components
+            West Coast Services Design Tokens &amp; Components
           </h1>
           <p className="text-ink-2 text-lg md:text-xl max-w-2xl mt-5 leading-relaxed">
             Industrial and editorial aesthetic: off-white paper, ink black, signal-orange accents, hairline rules, and square-ish corners.
@@ -166,7 +166,7 @@ export function StyleGuideClient() {
                 Body Text · IBM Plex Sans 400 &amp; 600 · 16–19px · Line-height 1.6
               </div>
               <p className="text-ink-2 text-base md:text-lg leading-[1.6] max-w-3xl">
-                Veltro compares business electricity, gas, water and waste contracts across UK suppliers and handles the switch for you. If you want it, our in-house team also builds your website and runs your social media and ads. We disclose our commission before you sign.
+                West Coast Services compares business electricity, gas, water and waste contracts across UK suppliers and handles the switch for you. If you want it, our in-house team also builds your website and runs your social media and ads. We disclose our commission before you sign.
               </p>
             </div>
 
@@ -428,7 +428,7 @@ export function StyleGuideClient() {
                     />
                     <circle cx="12" cy="13" r="1.8" fill="#F1F1EC" />
                   </svg>
-                  <span className="font-display font-black text-2xl tracking-[-0.035em]">Veltro</span>
+                  <span className="font-display font-black text-2xl tracking-[-0.035em]">West Coast Services</span>
                 </div>
                 <div className="flex items-center gap-2 font-mono text-xs uppercase text-[#8B8F86]">
                   <span className="w-1.5 h-1.5 rounded-full bg-signal animate-blink" />

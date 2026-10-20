@@ -18,8 +18,10 @@ export function Promises() {
 
           <div className="pt-4">
             <PhotoSlot
+              src={promises.photoSrc}
+              alt="West Coast Services team working in modern UK office"
               brief={promises.photoBrief}
-              className="h-64 w-full opacity-95"
+              className="h-64 sm:h-72 w-full border border-line-dark shadow-md"
             />
           </div>
         </div>

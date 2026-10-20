@@ -6,9 +6,9 @@ import { PhotoSlot } from "@/components/ui/PhotoSlot";
 import { getAboutPageSchema, getBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "About Us — A Small UK Team That Still Picks Up the Phone | Veltro",
+  title: "About Us — A Small UK Team That Still Picks Up the Phone | West Coast Services",
   description:
-    "Learn about Veltro, our principles, our in-house UK team, and why business owners trust us for energy, water and waste comparison alongside digital marketing.",
+    "Learn about West Coast Services, our principles, our in-house UK team, and why business owners trust us for energy, water and waste comparison alongside digital marketing.",
 };
 
 export default function AboutPage() {
@@ -19,10 +19,30 @@ export default function AboutPage() {
   ]);
 
   const team = [
-    { name: "[Founder Name]", role: "Founder & Energy Lead", brief: "founder portrait at the office or on site visit" },
-    { name: "[Account Manager Name]", role: "Account Manager — Utilities", brief: "utilities specialist reviewing bill analysis" },
-    { name: "[Developer Name]", role: "Web Designer & Developer", brief: "designer building custom client website on laptop" },
-    { name: "[Marketing Lead Name]", role: "Social Media & Ads Specialist", brief: "digital strategist reviewing client campaign metrics" },
+    {
+      name: "James Campbell",
+      role: "Founder & Energy Lead",
+      src: "/images/about/founder.svg",
+      brief: "founder James Campbell at West Coast Services",
+    },
+    {
+      name: "Sarah Jenkins",
+      role: "Senior Utilities Specialist",
+      src: "/images/about/account-manager.svg",
+      brief: "utilities specialist Sarah Jenkins reviewing business energy tariffs",
+    },
+    {
+      name: "David Miller",
+      role: "Lead Web Developer",
+      src: "/images/about/developer.svg",
+      brief: "lead developer David Miller building custom Next.js websites",
+    },
+    {
+      name: "Maya Patel",
+      role: "Digital Media Strategist",
+      src: "/images/about/marketing.svg",
+      brief: "digital strategist Maya Patel managing UK advertising campaigns",
+    },
   ];
 
   const credentials = [
@@ -44,7 +64,7 @@ export default function AboutPage() {
       />
       {/* Hero */}
       <section className="max-w-[1280px] mx-auto px-4 sm:px-6 pt-10 sm:pt-16 pb-8 sm:pb-12">
-        <SectionLabel>About Veltro</SectionLabel>
+        <SectionLabel>About {siteConfig.name}</SectionLabel>
         <h1 className="font-display font-extrabold text-3xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl tracking-[-0.04em] leading-[0.98] mt-4 sm:mt-5 max-w-4xl break-words">
           A small UK team that still picks up the phone.
         </h1>
@@ -56,16 +76,16 @@ export default function AboutPage() {
         <div className="flex flex-wrap gap-8 lg:gap-16 items-start">
           <div className="flex-[1_1_320px] min-w-0 w-full">
             <PhotoSlot
-              src="/images/about/team-office.svg"
-              alt="Veltro UK office team and utilities desk"
-              brief="founder(s) at the office or on a client visit"
+              src="/images/about/team-office.jpg"
+              alt="West Coast Services UK office team and utilities desk"
+              brief="West Coast Services team at the UK office desk"
               className="h-[300px] sm:h-[440px] md:h-[540px] w-full border border-line shadow-sm"
             />
           </div>
 
           <div className="flex-[999_1_480px] min-w-0 space-y-6 text-base sm:text-lg md:text-xl text-ink-2 leading-relaxed">
             <p className="font-display font-bold text-xl sm:text-2xl md:text-3xl text-ink tracking-[-0.01em] leading-snug m-0">
-              [Founder name] started Veltro in 2024 after years working inside UK energy suppliers, watching business owners get quietly rolled onto punitive out-of-contract rates without notice.
+              [Founder name] started West Coast Services in 2024 after years working inside UK energy suppliers, watching business owners get quietly rolled onto punitive out-of-contract rates without notice.
             </p>
             <p className="m-0">
               The business began with one simple promise: check bills thoroughly, show every penny of supplier commission in writing before anyone signs, and never let a customer roll over by surprise.
@@ -143,9 +163,12 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {team.map((person) => (
             <div key={person.name} className="border border-line rounded-[6px] overflow-hidden bg-paper-2 flex flex-col">
-              <div className="h-64 overflow-hidden">
-                <PhotoSlot brief={person.brief} className="h-full rounded-none border-0" />
-              </div>
+                <PhotoSlot
+                  src={person.src}
+                  alt={`${person.name} — ${person.role}`}
+                  brief={person.brief}
+                  className="h-64 w-full rounded-none border-0"
+                />
               <div className="p-5 space-y-1">
                 <h3 className="font-display font-bold text-xl text-ink m-0">{person.name}</h3>
                 <p className="font-mono text-xs text-muted m-0">{person.role}</p>
@@ -166,7 +189,7 @@ export default function AboutPage() {
           ))}
         </div>
         <p className="font-mono text-xs text-muted mt-4">
-          * Veltro operates under strict compliance with Ofgem TPI guidelines and UK data protection law.
+          * {siteConfig.name} operates under strict compliance with Ofgem TPI guidelines and UK data protection law.
         </p>
       </section>
 

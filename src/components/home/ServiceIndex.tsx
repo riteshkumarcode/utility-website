@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { homeContent } from "@/content/home";
 import { services } from "@/content/services";
 import { Arrow } from "@/components/ui/Arrow";
@@ -35,13 +36,26 @@ export function ServiceIndex() {
               <Link
                 key={s.slug}
                 href={`/services/${s.slug}`}
-                className="group flex items-center gap-3 sm:gap-5 p-3.5 sm:p-5 -mx-1 sm:-mx-3 rounded-[4px] hover:bg-signal transition-colors text-ink"
+                className="group flex items-center gap-3 sm:gap-4 p-3 sm:p-4 -mx-1 sm:-mx-3 rounded-[4px] hover:bg-signal transition-colors text-ink"
               >
-                <span className="font-mono text-xs sm:text-sm font-semibold text-muted group-hover:text-ink transition-colors w-6 sm:w-7 shrink-0">
+                <span className="font-mono text-xs sm:text-sm font-semibold text-muted group-hover:text-ink transition-colors w-5 sm:w-6 shrink-0">
                   {s.num}
                 </span>
+
+                <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-[4px] overflow-hidden shrink-0 border border-line group-hover:border-ink/40 bg-stone">
+                  {s.photo.src && (
+                    <Image
+                      src={s.photo.src}
+                      alt={s.photo.alt || s.name}
+                      fill
+                      sizes="56px"
+                      className="object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
+                    />
+                  )}
+                </div>
+
                 <div className="flex-1 min-w-0">
-                  <span className="font-display font-bold text-lg sm:text-2xl tracking-[-0.02em] block">
+                  <span className="font-display font-bold text-base sm:text-xl tracking-[-0.02em] block truncate">
                     {s.name}
                   </span>
                   <span className="text-xs sm:text-sm text-ink-2 group-hover:text-ink/90 transition-colors block mt-0.5 truncate">
@@ -67,13 +81,26 @@ export function ServiceIndex() {
               <Link
                 key={s.slug}
                 href={`/services/${s.slug}`}
-                className="group flex items-center gap-3 sm:gap-5 p-3.5 sm:p-5 -mx-1 sm:-mx-3 rounded-[4px] hover:bg-signal transition-colors text-ink"
+                className="group flex items-center gap-3 sm:gap-4 p-3 sm:p-4 -mx-1 sm:-mx-3 rounded-[4px] hover:bg-signal transition-colors text-ink"
               >
-                <span className="font-mono text-xs sm:text-sm font-semibold text-muted group-hover:text-ink transition-colors w-6 sm:w-7 shrink-0">
+                <span className="font-mono text-xs sm:text-sm font-semibold text-muted group-hover:text-ink transition-colors w-5 sm:w-6 shrink-0">
                   {s.num}
                 </span>
+
+                <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-[4px] overflow-hidden shrink-0 border border-line group-hover:border-ink/40 bg-stone">
+                  {s.photo.src && (
+                    <Image
+                      src={s.photo.src}
+                      alt={s.photo.alt || s.name}
+                      fill
+                      sizes="56px"
+                      className="object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
+                    />
+                  )}
+                </div>
+
                 <div className="flex-1 min-w-0">
-                  <span className="font-display font-bold text-lg sm:text-2xl tracking-[-0.02em] block">
+                  <span className="font-display font-bold text-base sm:text-xl tracking-[-0.02em] block truncate">
                     {s.name}
                   </span>
                   <span className="text-xs sm:text-sm text-ink-2 group-hover:text-ink/90 transition-colors block mt-0.5 truncate">

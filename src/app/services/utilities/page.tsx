@@ -8,7 +8,7 @@ import { Arrow } from "@/components/ui/Arrow";
 import { getBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Business Energy & Utilities Comparison | Veltro UK Broker",
+  title: "Business Energy & Utilities Comparison | West Coast Services UK",
   description:
     "Whole-of-market comparison for UK business electricity, gas, water and commercial waste contracts. Transparent commission, bill auditing, zero rollover traps.",
 };

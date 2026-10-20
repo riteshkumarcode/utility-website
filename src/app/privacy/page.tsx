@@ -3,8 +3,8 @@ import { siteConfig } from "@/content/site";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 
 export const metadata: Metadata = {
-  title: "Privacy Notice | Veltro",
-  description: "Privacy notice explaining how Veltro handles business contact details, utility bills, and personal data.",
+  title: "Privacy Notice | West Coast Services",
+  description: "Privacy notice explaining how West Coast Services handles business contact details, utility bills, and personal data.",
 };
 
 export default function PrivacyPage() {
@@ -23,7 +23,7 @@ export default function PrivacyPage() {
         <section className="space-y-3">
           <h2 className="font-display font-bold text-2xl text-ink">1. Who We Are</h2>
           <p>
-            {siteConfig.legalName} (&quot;Veltro&quot;, &quot;we&quot;, &quot;us&quot;) is registered in England &amp; Wales under company number {siteConfig.companyNumber}. We act as a data controller when you submit your business details, utility bills, or contact information through this website.
+            {siteConfig.legalName} (&quot;{siteConfig.name}&quot;, &quot;we&quot;, &quot;us&quot;) is registered in England &amp; Wales under company number {siteConfig.companyNumber}. We act as a data controller when you submit your business details, utility bills, or contact information through this website.
           </p>
           <p>
             Data protection registration: ICO reference {siteConfig.icoNumber || "[CLIENT TO COMPLETE ICO NUMBER]"}.

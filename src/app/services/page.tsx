@@ -3,7 +3,7 @@ import { ServicesDirectoryClient } from "./ServicesDirectoryClient";
 import { getBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "All Services — Utilities & Digital Marketing | Veltro",
+  title: "All Services — Utilities & Digital Marketing | West Coast Services",
   description:
     "Four services that cut what your UK business spends on electricity, gas, water and waste. Four that grow what it earns with web design, SEO, social media and ads.",
 };

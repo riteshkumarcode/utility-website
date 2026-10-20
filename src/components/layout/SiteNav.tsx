@@ -81,7 +81,7 @@ export function SiteNav() {
         {/* Logo */}
         <Link
           href="/"
-          aria-label="Veltro home"
+          aria-label={`${siteConfig.name} home`}
           className="flex items-center gap-2.5 font-display font-black text-2xl md:text-[27px] tracking-[-0.035em] text-ink focus-visible:outline-2 focus-visible:outline-ink focus-visible:outline-offset-4"
         >
           <svg

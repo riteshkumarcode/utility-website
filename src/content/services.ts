@@ -132,7 +132,7 @@ export const services: Service[] = [
         a: "No. The switch is purely administrative across the national grid infrastructure. The wires and meter stay exactly the same.",
       },
       {
-        q: "How does Veltro get paid?",
+        q: "How does West Coast Services get paid?",
         a: "Suppliers pay us an introducer commission built into the unit rate. Under Ofgem regulations, we disclose the exact commission figure in pounds and pence before you sign.",
       },
       {
@@ -145,7 +145,7 @@ export const services: Service[] = [
       },
     ],
     seo: {
-      title: "Business Electricity Contracts for UK Firms | Veltro",
+      title: "Business Electricity Contracts for UK Firms | West Coast Services",
       description:
         "Compare UK business electricity rates across trusted suppliers. Clear commission disclosure, bill auditing and complete switch management.",
     },
@@ -266,7 +266,7 @@ export const services: Service[] = [
       },
     ],
     seo: {
-      title: "Business Gas Contracts & Comparison | Veltro UK",
+      title: "Business Gas Contracts & Comparison | West Coast Services UK",
       description:
         "Commercial gas comparison for UK businesses. Transparent quotes, fixed tariffs, and switch handling with zero supply disruption.",
     },
@@ -387,7 +387,7 @@ export const services: Service[] = [
       },
     ],
     seo: {
-      title: "Business Water Retailer Comparison & Bill Audits | Veltro",
+      title: "Business Water Retailer Comparison & Bill Audits | West Coast Services",
       description:
         "Switch commercial water retailers in England and Scotland. Free water bill audits, drainage charge checks and leak mitigation.",
     },
@@ -417,7 +417,7 @@ export const services: Service[] = [
       { label: "New law", value: "Simpler Recycling ready" },
       { label: "Collections", value: "Daily, weekly or scheduled" },
     ],
-    includedIntro: "What's included with Veltro waste management:",
+    includedIntro: "What's included with West Coast Services waste management:",
     included: [
       {
         title: "Independent carrier comparison",
@@ -460,7 +460,7 @@ export const services: Service[] = [
       },
       {
         title: "Collections start smoothly",
-        body: "Scheduled pickups start, with one point of contact at Veltro if a collection is ever delayed.",
+        body: "Scheduled pickups start, with one point of contact at West Coast Services if a collection is ever delayed.",
       },
     ],
     table: {
@@ -508,7 +508,7 @@ export const services: Service[] = [
       },
     ],
     seo: {
-      title: "Commercial Waste & Recycling Collections UK | Veltro",
+      title: "Commercial Waste & Recycling Collections UK | West Coast Services",
       description:
         "Affordable business waste collection and recycling across the UK. Duty of Care compliance, transparent lift fees, and Simpler Recycling readiness.",
     },
@@ -538,7 +538,7 @@ export const services: Service[] = [
       { label: "Ownership", value: "100% owned by you" },
       { label: "Hosting", value: "Ultra-fast UK edge servers" },
     ],
-    includedIntro: "What every Veltro website project includes:",
+    includedIntro: "What every West Coast Services website project includes:",
     included: [
       {
         title: "Bespoke design, no templates",
@@ -629,7 +629,7 @@ export const services: Service[] = [
       },
     ],
     seo: {
-      title: "Business Website Development | Conversion-Focused Web Design | Veltro",
+      title: "Business Website Development | Conversion-Focused Web Design | West Coast Services",
       description:
         "Custom websites for UK businesses built to convert visitors into enquiries. Fast loading, mobile-first design, clean code and full ownership.",
     },
@@ -749,7 +749,7 @@ export const services: Service[] = [
       },
     ],
     seo: {
-      title: "Social Media Management for UK Businesses | Veltro Digital",
+      title: "Social Media Management for UK Businesses | West Coast Services Digital",
       description:
         "Professional social media management for UK companies. Monthly content calendars, on-site photography shoots, posting and community engagement.",
     },
@@ -870,7 +870,7 @@ export const services: Service[] = [
       },
     ],
     seo: {
-      title: "Local SEO Services for UK Businesses | Veltro Digital",
+      title: "Local SEO Services for UK Businesses | West Coast Services Digital",
       description:
         "Rank higher on Google Maps and search. Transparent SEO services for UK SMEs: technical audits, local citations, and conversion-focused content.",
     },
@@ -978,7 +978,7 @@ export const services: Service[] = [
         a: "For most UK local business campaigns, we recommend starting with a minimum ad spend of £500 to £1,500 per month paid directly to Google or Meta, depending on sector competition.",
       },
       {
-        q: "Do I pay the ad spend to Veltro or the platforms?",
+        q: "Do I pay the ad spend to West Coast Services or the platforms?",
         a: "You pay the ad spend directly to Google and Meta using your company credit card. Our management fee is invoiced separately with zero markups on your media spend.",
       },
       {
@@ -991,7 +991,7 @@ export const services: Service[] = [
       },
     ],
     seo: {
-      title: "Paid Advertising & Google Ads Management | Veltro Digital",
+      title: "Paid Advertising & Google Ads Management | West Coast Services Digital",
       description:
         "Results-driven Google Ads and Meta advertising for UK businesses. Transparent lead tracking, weekly negative keyword pruning, and zero ad spend markups.",
     },

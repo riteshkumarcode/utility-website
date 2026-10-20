@@ -1,0 +1,26 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#15171B"/>
+  <circle cx="200" cy="150" r="64" fill="#2E3440"/>
+  <path d="M120 340C120 280 155 245 200 245C245 245 280 280 280 340H120Z" fill="#232731"/>
+  <!-- Hair Base -->
+  <path d="M150 140C148 102 170 90 200 90C230 90 252 102 250 140C242 118 225 110 200 110C175 110 158 118 150 140Z" fill="#1F232A"/>
+  <!-- Face -->
+  <circle cx="200" cy="150" r="48" fill="#E2D4C3"/>
+  <!-- Glasses -->
+  <rect x="170" y="140" width="24" height="18" rx="3" stroke="#FF5B1F" stroke-width="2.6" fill="none"/>
+  <rect x="206" y="140" width="24" height="18" rx="3" stroke="#FF5B1F" stroke-width="2.6" fill="none"/>
+  <line x1="194" y1="149" x2="206" y2="149" stroke="#FF5B1F" stroke-width="2.6"/>
+  <!-- Eyes & Smile -->
+  <circle cx="182" cy="149" r="3.5" fill="#1F232A"/>
+  <circle cx="218" cy="149" r="3.5" fill="#1F232A"/>
+  <path d="M190 174C195 180 205 180 210 174" stroke="#9E765D" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Tech Hoodie -->
+  <path d="M140 252L170 340H230L260 252" fill="#2E3440"/>
+  <path d="M175 252C175 275 185 290 200 290C215 290 225 275 225 252" fill="#1F232A"/>
+  <!-- Code brackets in background -->
+  <text x="320" y="120" fill="#2B302B" font-family="monospace" font-size="34" font-weight="bold">&lt;/&gt;</text>
+  <!-- Badge -->
+  <rect x="25" y="25" width="135" height="28" rx="4" fill="#1E221E" stroke="#2B302B"/>
+  <circle cx="39" cy="39" r="4" fill="#FF5B1F"/>
+  <text x="50" y="43" fill="#F1F1EC" font-family="monospace" font-size="11" font-weight="bold" letter-spacing="1">DEV &amp; DESIGN</text>
+</svg>
