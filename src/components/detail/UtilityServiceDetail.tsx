@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
-import { motion, useReducedMotion } from "motion/react";
+import { motion } from "motion/react";
 import { Service } from "@/content/services";
 import { siteConfig } from "@/content/site";
 import { SectionLabel } from "@/components/ui/SectionLabel";

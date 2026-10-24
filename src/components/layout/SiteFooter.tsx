@@ -3,7 +3,6 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { siteConfig } from "@/content/site";
-import { Arrow } from "@/components/ui/Arrow";
 
 export function SiteFooter() {
   const [ukTime, setUkTime] = useState<string>("");
@@ -49,7 +48,9 @@ export function SiteFooter() {
     { text: siteConfig.name.toUpperCase(), isBrand: true },
     { text: "WATER AUDITS & EFFICIENCY", isBrand: false },
     { text: siteConfig.name.toUpperCase(), isBrand: true },
-    { text: "WASTE & RECYCLING AUDITS", isBrand: false },
+    { text: "COMMERCIAL LOANS & CAPITAL", isBrand: false },
+    { text: siteConfig.name.toUpperCase(), isBrand: true },
+    { text: "CARD MACHINES & ACQUIRING", isBrand: false },
     { text: siteConfig.name.toUpperCase(), isBrand: true },
     { text: "NEXT.JS WEBSITES & APPS", isBrand: false },
     { text: siteConfig.name.toUpperCase(), isBrand: true },
@@ -103,10 +104,10 @@ export function SiteFooter() {
       </div>
 
       <div className="max-w-[1280px] mx-auto px-6 pt-16 pb-8">
-        {/* 4 Link Columns */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        {/* 5 Link Columns */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {/* Col 1: Brand */}
-          <div className="flex flex-col gap-3.5">
+          <div className="flex flex-col gap-3.5 lg:col-span-1">
             <Link
               href="/"
               className="font-display font-black text-3xl text-on-dark tracking-[-0.03em] hover:text-signal transition-colors inline-block group"
@@ -114,7 +115,7 @@ export function SiteFooter() {
               <span>{siteConfig.name}</span>
             </Link>
             <p className="text-sm leading-relaxed max-w-[280px] text-[#A6AAA0] m-0">
-              Business utilities and digital marketing for UK companies. {siteConfig.address.town}, {siteConfig.address.county}.
+              Business utilities, commercial finance and digital marketing for UK companies. {siteConfig.address.town}, {siteConfig.address.county}.
             </p>
             <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-[3px] bg-[#161916] border border-line-dark text-[11px] font-mono text-[#A6AAA0] w-fit mt-1">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
@@ -132,7 +133,7 @@ export function SiteFooter() {
               href="/services/utilities"
               className="font-mono text-xs uppercase tracking-[0.12em] text-signal font-bold hover:underline mb-1 inline-flex items-center gap-1 group"
             >
-              <span>Energy &amp; Utilities Hub</span>
+              <span>Utilities Hub</span>
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
             <Link
@@ -161,13 +162,36 @@ export function SiteFooter() {
             </Link>
           </div>
 
-          {/* Col 3: Digital */}
+          {/* Col 3: Finance & Card Machines */}
+          <div className="flex flex-col gap-2.5 text-[15px]">
+            <Link
+              href="/services/finance"
+              className="font-mono text-xs uppercase tracking-[0.12em] text-signal font-bold hover:underline mb-1 inline-flex items-center gap-1 group"
+            >
+              <span>Finance &amp; Cards</span>
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
+            </Link>
+            <Link
+              href="/services/business-loans"
+              className="text-on-dark hover:text-signal transition-colors self-start hover:translate-x-1 transform duration-150"
+            >
+              Business loans
+            </Link>
+            <Link
+              href="/services/merchant-services"
+              className="text-on-dark hover:text-signal transition-colors self-start hover:translate-x-1 transform duration-150"
+            >
+              Card machines
+            </Link>
+          </div>
+
+          {/* Col 4: Digital */}
           <div className="flex flex-col gap-2.5 text-[15px]">
             <Link
               href="/services/digital"
               className="font-mono text-xs uppercase tracking-[0.12em] text-signal font-bold hover:underline mb-1 inline-flex items-center gap-1 group"
             >
-              <span>Digital Studio Hub</span>
+              <span>Digital Studio</span>
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
             <Link
@@ -196,7 +220,7 @@ export function SiteFooter() {
             </Link>
           </div>
 
-          {/* Col 4: Company */}
+          {/* Col 5: Company */}
           <div className="flex flex-col gap-2.5 text-[15px]">
             <div className="font-mono text-xs uppercase tracking-[0.12em] text-[#8B8F86] mb-1">
               Direct Contact

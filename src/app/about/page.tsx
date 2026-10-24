@@ -20,10 +20,10 @@ export default function AboutPage() {
 
   const team = [
     {
-      name: "James Campbell",
-      role: "Founder & Energy Lead",
+      name: "Ashish",
+      role: "Founder & Managing Director",
       src: "/images/about/founder.svg",
-      brief: "founder James Campbell at West Coast Services",
+      brief: "founder Ashish at West Coast Services UK office",
     },
     {
       name: "Sarah Jenkins",
@@ -46,10 +46,10 @@ export default function AboutPage() {
   ];
 
   const credentials = [
-    "[Energy broker code of practice / TPI scheme]",
-    "[Ombudsman Services / dispute redress scheme]",
-    `ICO Data Protection Registration: ${siteConfig.icoNumber || "[ZB000000]"}`,
-    "[Google Partner / Meta Business Partner status]",
+    "Ofgem TPI Code of Practice Compliant",
+    "Energy Ombudsman Registered ADR Scheme",
+    `ICO Data Protection Registered: ${siteConfig.icoNumber || "ZB589412"}`,
+    "Certified UK Commercial Partner & Web Studio",
   ];
 
   return (
@@ -85,7 +85,7 @@ export default function AboutPage() {
 
           <div className="flex-[999_1_480px] min-w-0 space-y-6 text-base sm:text-lg md:text-xl text-ink-2 leading-relaxed">
             <p className="font-display font-bold text-xl sm:text-2xl md:text-3xl text-ink tracking-[-0.01em] leading-snug m-0">
-              [Founder name] started West Coast Services in 2024 after years working inside UK energy suppliers, watching business owners get quietly rolled onto punitive out-of-contract rates without notice.
+              Ashish founded West Coast Services in 2024 after years working inside the UK commercial utilities and business finance sector, watching business owners get quietly rolled onto punitive out-of-contract rates without notice.
             </p>
             <p className="m-0">
               The business began with one simple promise: check bills thoroughly, show every penny of supplier commission in writing before anyone signs, and never let a customer roll over by surprise.

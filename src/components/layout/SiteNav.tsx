@@ -8,24 +8,24 @@ import { motion, AnimatePresence } from "motion/react";
 import { siteConfig } from "@/content/site";
 import { Arrow } from "@/components/ui/Arrow";
 
+const emptySubscribe = () => () => {};
+
 export function SiteNav() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
+  const mounted = React.useSyncExternalStore(emptySubscribe, () => true, () => false);
   const [utilitiesOpen, setUtilitiesOpen] = useState(true);
+  const [financeOpen, setFinanceOpen] = useState(true);
   const [digitalOpen, setDigitalOpen] = useState(true);
   const menuRef = useRef<HTMLDivElement>(null);
   const openButtonRef = useRef<HTMLButtonElement>(null);
-
-  // Mount detection for React portal
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const [prevPathname, setPrevPathname] = useState(pathname);
 
   // Close mobile menu whenever route changes
-  useEffect(() => {
+  if (prevPathname !== pathname) {
+    setPrevPathname(pathname);
     setMobileMenuOpen(false);
-  }, [pathname]);
+  }
 
   // Lock body scroll and handle keyboard accessibility
   useEffect(() => {
@@ -59,6 +59,11 @@ export function SiteNav() {
     { name: "Business Gas", href: "/services/business-gas", num: "02" },
     { name: "Business Water", href: "/services/business-water", num: "03" },
     { name: "Waste Management", href: "/services/waste-management", num: "04" },
+  ];
+
+  const financeServices = [
+    { name: "Business Loans", href: "/services/business-loans", num: "09" },
+    { name: "Merchant Services & Card Machines", href: "/services/merchant-services", num: "10" },
   ];
 
   const digitalServices = [
@@ -160,7 +165,7 @@ export function SiteNav() {
                     pathname === "/services" ? "bg-signal text-ink" : "text-on-dark hover:bg-white/5 hover:text-signal"
                   }`}
                 >
-                  <span>All 8 Services</span>
+                  <span>All 10 Services</span>
                   <Arrow size={18} />
                 </Link>
               </nav>
@@ -188,6 +193,48 @@ export function SiteNav() {
                 {utilitiesOpen && (
                   <div className="grid grid-cols-1 gap-1.5 mt-2">
                     {utilityServices.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className={`flex items-center justify-between py-2.5 px-3 rounded-[4px] text-sm font-semibold transition-colors ${
+                          isActive(item.href) ? "bg-white/15 text-signal" : "text-[#C9CBC4] hover:bg-white/5 hover:text-on-dark"
+                        }`}
+                      >
+                        <span className="flex items-center gap-2.5">
+                          <span className="font-mono text-xs text-[#8B8F86]">{item.num}</span>
+                          <span>{item.name}</span>
+                        </span>
+                        <span className="text-xs text-signal">→</span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Business Finance & Card Machines Section */}
+              <div className="border-t border-line-dark pt-5">
+                <div className="flex items-center justify-between pb-2 px-1">
+                  <Link
+                    href="/services/finance"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="font-mono text-xs uppercase tracking-[0.14em] text-signal font-bold hover:underline"
+                  >
+                    Finance &amp; Card Machines Hub →
+                  </Link>
+                  <button
+                    type="button"
+                    onClick={() => setFinanceOpen(!financeOpen)}
+                    aria-label="Toggle finance services list"
+                    className="text-xs text-[#8B8F86] hover:text-on-dark p-1"
+                  >
+                    {financeOpen ? "Hide" : "Show"}
+                  </button>
+                </div>
+
+                {financeOpen && (
+                  <div className="grid grid-cols-1 gap-1.5 mt-2">
+                    {financeServices.map((item) => (
                       <Link
                         key={item.href}
                         href={item.href}

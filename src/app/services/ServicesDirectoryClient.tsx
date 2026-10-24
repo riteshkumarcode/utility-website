@@ -10,13 +10,15 @@ import { Arrow } from "@/components/ui/Arrow";
 import { motion, AnimatePresence } from "motion/react";
 
 export function ServicesDirectoryClient() {
-  const [filter, setFilter] = useState<"all" | "utilities" | "digital">("all");
+  const [filter, setFilter] = useState<"all" | "utilities" | "finance" | "digital">("all");
 
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.toLowerCase();
       if (hash === "#utilities") {
         setFilter("utilities");
+      } else if (hash === "#finance") {
+        setFilter("finance");
       } else if (hash === "#digital") {
         setFilter("digital");
       } else {
@@ -29,10 +31,12 @@ export function ServicesDirectoryClient() {
     return () => window.removeEventListener("hashchange", handleHashChange);
   }, []);
 
-  const setFilterAndHash = (newFilter: "all" | "utilities" | "digital") => {
+  const setFilterAndHash = (newFilter: "all" | "utilities" | "finance" | "digital") => {
     setFilter(newFilter);
     if (newFilter === "utilities") {
       window.location.hash = "#utilities";
+    } else if (newFilter === "finance") {
+      window.location.hash = "#finance";
     } else if (newFilter === "digital") {
       window.location.hash = "#digital";
     } else {
@@ -41,19 +45,20 @@ export function ServicesDirectoryClient() {
   };
 
   const utils = services.filter((s) => s.group === "utilities");
+  const finances = services.filter((s) => s.group === "finance");
   const digis = services.filter((s) => s.group === "digital");
 
   return (
     <div className="bg-paper text-ink pb-12">
       {/* Hero */}
       <section className="max-w-[1280px] mx-auto px-4 sm:px-6 pt-10 sm:pt-16 pb-8 sm:pb-12">
-        <SectionLabel>All 8 Services</SectionLabel>
+        <SectionLabel>All 10 Services</SectionLabel>
         <div className="flex flex-wrap gap-6 sm:gap-8 items-end justify-between mt-4 sm:mt-5">
           <h1 className="font-display font-extrabold text-3xl sm:text-5xl md:text-7xl lg:text-8xl tracking-[-0.04em] leading-[0.96] max-w-4xl break-words">
-            Eight services. One phone number.
+            Ten services. One trusted partner.
           </h1>
           <p className="max-w-md text-base sm:text-lg md:text-xl text-ink-2 leading-relaxed m-0">
-            Four that cut what your business spends. Four that grow what it earns. Pick one, or let us look after the lot.
+            Four that cut your utility bills, two for commercial finance and card machines, and four that build digital reach. Pick one, or let us look after the lot.
           </p>
         </div>
         <div className="h-1.5 w-36 sm:w-44 bg-signal mt-6 sm:mt-7 animate-grow" />
@@ -72,7 +77,7 @@ export function ServicesDirectoryClient() {
               filter === "all" ? "bg-ink text-on-dark" : "bg-transparent text-ink hover:bg-stone/40"
             }`}
           >
-            All Services (8)
+            All Services (10)
           </button>
           <button
             type="button"
@@ -83,6 +88,16 @@ export function ServicesDirectoryClient() {
             }`}
           >
             Energy &amp; Utilities (4)
+          </button>
+          <button
+            type="button"
+            onClick={() => setFilterAndHash("finance")}
+            aria-pressed={filter === "finance"}
+            className={`px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-[15px] font-bold border-r border-line transition-colors cursor-pointer min-h-[44px] sm:min-h-[48px] ${
+              filter === "finance" ? "bg-ink text-on-dark" : "bg-transparent text-ink hover:bg-stone/40"
+            }`}
+          >
+            Finance &amp; Card Machines (2)
           </button>
           <button
             type="button"
@@ -173,7 +188,84 @@ export function ServicesDirectoryClient() {
         )}
       </AnimatePresence>
 
-      {/* Category B: Digital Marketing Grid */}
+      {/* Category B: Finance & Card Machines Grid */}
+      <AnimatePresence>
+        {(filter === "all" || filter === "finance") && (
+          <motion.section
+            key="finance-section"
+            id="finance"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.35, ease: "easeOut" }}
+            className="max-w-[1280px] mx-auto px-4 sm:px-6 py-8 sm:py-10 mt-6 sm:mt-8"
+          >
+            <div className="flex flex-wrap justify-between items-baseline gap-2 pb-3.5 border-b-2 border-ink">
+              <div>
+                <span className="font-mono text-xs text-signal font-bold tracking-widest uppercase block mb-1">
+                  Category B
+                </span>
+                <h2 className="font-display font-extrabold text-2xl sm:text-4xl tracking-[-0.03em] m-0">
+                  Business Loans &amp; Card Machines
+                </h2>
+              </div>
+              <div className="flex items-center gap-4">
+                <span className="font-mono text-xs text-muted tracking-wider uppercase hidden sm:inline">
+                  Soft Searches · Next-Day Payouts · Zero Hidden Fees
+                </span>
+                <Link
+                  href="/services/finance"
+                  className="font-mono text-xs text-signal font-bold tracking-wider uppercase hover:underline"
+                >
+                  Dedicated Hub Page →
+                </Link>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mt-6 sm:mt-8">
+              {finances.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/services/${c.slug}`}
+                  className="group flex flex-col sm:flex-row border-[1.5px] border-line rounded-[6px] overflow-hidden bg-paper-2 hover:border-ink transition-all duration-300 hover:shadow-md"
+                >
+                  <div className="sm:w-5/12 h-52 sm:h-auto overflow-hidden relative bg-stone shrink-0">
+                    <PhotoSlot
+                      src={c.photo.src}
+                      alt={c.photo.alt}
+                      brief={c.photo.brief}
+                      className="h-full rounded-none border-0 group-hover:scale-[1.04] transition-transform duration-700 ease-out"
+                    />
+                    <div className="absolute top-2.5 left-2.5 bg-ink/90 text-on-dark font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-[2px] flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-signal" />
+                      Finance #{c.num}
+                    </div>
+                  </div>
+                  <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between gap-4">
+                    <div className="space-y-2">
+                      <span className="font-mono text-xs text-muted block">
+                        Commercial lending &amp; payments
+                      </span>
+                      <h3 className="font-display font-bold text-xl sm:text-2xl tracking-[-0.02em] text-ink group-hover:text-rust transition-colors m-0">
+                        {c.name}
+                      </h3>
+                      <p className="text-sm text-ink-2 leading-relaxed m-0">
+                        {c.cardLine}
+                      </p>
+                    </div>
+                    <div className="pt-3 border-t border-line/60 flex items-center justify-between text-sm font-bold text-ink">
+                      <span>View rates &amp; options</span>
+                      <Arrow className="group-hover:translate-x-1.5 transition-transform" size={16} />
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </motion.section>
+        )}
+      </AnimatePresence>
+
+      {/* Category C: Digital Marketing Grid */}
       <AnimatePresence>
         {(filter === "all" || filter === "digital") && (
           <motion.section
@@ -188,7 +280,7 @@ export function ServicesDirectoryClient() {
             <div className="flex flex-wrap justify-between items-baseline gap-2 pb-3.5 border-b-2 border-ink">
               <div>
                 <span className="font-mono text-xs text-emerald-600 font-bold tracking-widest uppercase block mb-1">
-                  Category B
+                  Category C
                 </span>
                 <h2 className="font-display font-extrabold text-2xl sm:text-4xl tracking-[-0.03em] m-0">
                   In-House Digital Marketing &amp; Web

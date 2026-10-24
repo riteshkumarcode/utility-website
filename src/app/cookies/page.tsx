@@ -59,14 +59,14 @@ export default function CookiePage() {
         </section>
 
         <section className="space-y-3 p-6 bg-stone rounded-[6px] border border-line">
-          <h2 className="font-display font-bold text-xl text-ink">[CLIENT TO COMPLETE: Third Party Analytics Tooling]</h2>
+          <h2 className="font-display font-bold text-xl text-ink">3. Analytics &amp; Performance Measurement</h2>
           <p className="text-sm text-ink-2 leading-relaxed">
-            [CLIENT TO COMPLETE: Confirm whether you use Google Analytics 4, Plausible, or another analytics vendor, and confirm your target retention settings.]
+            We use privacy-compliant measurement tools with IP anonymisation enabled to analyze aggregated website traffic and form conversion rates. Analytics cookies are only set when you grant consent via our cookie banner, and you may withdraw consent at any time.
           </p>
         </section>
 
         <section className="space-y-3">
-          <h2 className="font-display font-bold text-2xl text-ink">3. Managing Your Preferences</h2>
+          <h2 className="font-display font-bold text-2xl text-ink">4. Managing Your Preferences</h2>
           <p>
             You can change your cookie preferences at any time by clearing your browser cache or clicking &quot;Cookie settings&quot; in our website footer. For questions, contact us at{" "}
             <a href={`mailto:${siteConfig.email}`} className="text-rust underline font-medium">

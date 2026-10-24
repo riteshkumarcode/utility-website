@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --color-paper: #F1F1EC;
-  --color-paper-2: #F8F8F4;
-  --color-stone: #E4E4DC;
-  --color-ink: #121512;
-  --color-ink-2: #3C413B;
-  --color-muted: #5B605A;
-  --color-line: #C9C9BF;
-  --color-line-dark: #2B302B;
-  --color-signal: #FF5B1F;
-  --color-rust: #B23A0B;
-  --color-on-dark: #F1F1EC;
-  --color-on-dark-muted: #C9CBC4;
+  --color-paper: #FFFFFF;
+  --color-paper-2: #F8FAFC;
+  --color-stone: #F1F4F9;
+  --color-ink: #0F172A;
+  --color-ink-2: #334155;
+  --color-muted: #64748B;
+  --color-line: #E2E8F0;
+  --color-line-dark: #222831;
+  --color-signal: #FF5500;
+  --color-rust: #D9480F;
+  --color-on-dark: #FFFFFF;
+  --color-on-dark-muted: #CBD5E1;
 
   --font-display: var(--font-archivo), sans-serif;
   --font-sans: var(--font-plex-sans), system-ui, sans-serif;
@@ -23,21 +23,21 @@
 }
 
 :root {
-  --paper: #F1F1EC;
-  --paper-2: #F8F8F4;
-  --stone: #E4E4DC;
-  --ink: #121512;
-  --ink-2: #3C413B;
-  --muted: #5B605A;
-  --line: #C9C9BF;
-  --line-dark: #2B302B;
-  --signal: #FF5B1F;
-  --rust: #B23A0B;
+  --paper: #FFFFFF;
+  --paper-2: #F8FAFC;
+  --stone: #F1F4F9;
+  --ink: #0F172A;
+  --ink-2: #334155;
+  --muted: #64748B;
+  --line: #E2E8F0;
+  --line-dark: #222831;
+  --signal: #FF5500;
+  --rust: #D9480F;
 }
 
 html {
-  background-color: #F1F1EC;
-  color: #121512;
+  background-color: #FFFFFF;
+  color: #0F172A;
   scroll-behavior: smooth;
   overflow-x: hidden;
   max-width: 100%;
@@ -45,8 +45,8 @@ html {
 
 body {
   margin: 0;
-  background-color: #F1F1EC;
-  color: #121512;
+  background-color: #FFFFFF;
+  color: #0F172A;
   font-family: var(--font-plex-sans), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -56,12 +56,12 @@ body {
 
 /* Accessible focus outline */
 :focus-visible {
-  outline: 2px solid #121512;
+  outline: 2px solid #0F172A;
   outline-offset: 3px;
 }
 
 .photo-slot {
-  background: repeating-linear-gradient(135deg, #D9D9D0 0 1px, #E7E7E0 1px 11px);
+  background: repeating-linear-gradient(135deg, #EDF2F7 0 1px, #F8FAFC 1px 11px);
 }
 
 /* Keyframe animations */

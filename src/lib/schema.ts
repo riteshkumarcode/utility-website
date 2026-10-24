@@ -57,7 +57,12 @@ export function getServiceSchema(service: Service) {
     "@context": "https://schema.org",
     "@type": "Service",
     name: service.name,
-    serviceType: service.group === "utilities" ? "Utility Brokerage" : "Digital Marketing",
+    serviceType:
+      service.group === "utilities"
+        ? "Utility Brokerage"
+        : service.group === "finance"
+        ? "Commercial Finance & Payment Processing"
+        : "Digital Marketing",
     description: service.intro,
     provider: {
       "@type": "Organization",

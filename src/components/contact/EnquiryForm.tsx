@@ -16,6 +16,8 @@ const serviceOptions = [
   { label: "Gas", slug: "business-gas" },
   { label: "Water", slug: "business-water" },
   { label: "Waste", slug: "waste-management" },
+  { label: "Business loans", slug: "business-loans" },
+  { label: "Card machines", slug: "merchant-services" },
   { label: "Website", slug: "website-development" },
   { label: "Social media", slug: "social-media-marketing" },
   { label: "SEO", slug: "seo" },

@@ -3,6 +3,7 @@
 import React from "react";
 import { Service } from "@/content/services";
 import { UtilityServiceDetail } from "@/components/detail/UtilityServiceDetail";
+import { FinanceServiceDetail } from "@/components/detail/FinanceServiceDetail";
 import { DigitalServiceDetail } from "@/components/detail/DigitalServiceDetail";
 
 interface ServiceDetailClientProps {
@@ -19,6 +20,16 @@ export function ServiceDetailClient({
   if (service.group === "utilities") {
     return (
       <UtilityServiceDetail
+        service={service}
+        sameCategory={sameCategory}
+        crossCategory={crossCategory}
+      />
+    );
+  }
+
+  if (service.group === "finance") {
+    return (
+      <FinanceServiceDetail
         service={service}
         sameCategory={sameCategory}
         crossCategory={crossCategory}

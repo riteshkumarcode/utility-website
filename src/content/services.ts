@@ -1,4 +1,4 @@
-export type Group = "utilities" | "digital";
+export type Group = "utilities" | "finance" | "digital";
 
 export interface Service {
   slug: string;
@@ -996,10 +996,254 @@ export const services: Service[] = [
         "Results-driven Google Ads and Meta advertising for UK businesses. Transparent lead tracking, weekly negative keyword pruning, and zero ad spend markups.",
     },
   },
+
+  // 09. Business Loans
+  {
+    slug: "business-loans",
+    num: "09",
+    group: "finance",
+    name: "Business loans",
+    shortName: "business loans",
+    cardLine: "Unsecured working capital, equipment finance and commercial loans from vetted UK lenders.",
+    h1: "Business loans and commercial finance with clear rates and no hidden broker charges.",
+    intro:
+      "We compare business loans, revolving credit facilities and asset finance across UK alternative and high street lenders. We show you the interest rates, total repayment costs and our exact broker fee before you proceed.",
+    cta: "Check business loan options",
+    ctaLine: "Need working capital or funding for equipment? Request a free comparison.",
+    photo: {
+      src: "/images/services/business-loans.jpg",
+      alt: "UK business owner reviewing business loan agreement paperwork with financial growth charts",
+      brief: "commercial finance review and loan approval paperwork on clean business desk",
+    },
+    facts: [
+      { label: "Loan amounts", value: "£10,000 to £500,000+" },
+      { label: "Decision speed", value: "Same-day to 48 hours" },
+      { label: "Terms", value: "3 months to 5 years" },
+      { label: "Fee disclosure", value: "100% upfront in pounds" },
+    ],
+    includedIntro: "What's covered in our commercial finance review:",
+    included: [
+      {
+        title: "Whole-of-market lender search",
+        body: "Quotes requested from UK specialist commercial lenders, challenger banks and accredited funding panels.",
+      },
+      {
+        title: "Unsecured working capital",
+        body: "Short-term cash flow loans requiring no personal property debentures or commercial asset charges.",
+      },
+      {
+        title: "Asset & equipment finance",
+        body: "Spread the cost of vehicles, machinery, catering equipment or commercial IT over its working lifespan.",
+      },
+      {
+        title: "Soft credit search checks",
+        body: "Initial eligibility checked with soft footprint searches that will not affect your business credit score.",
+      },
+      {
+        title: "Transparent broker fees",
+        body: "All introducer fees and interest margins written down in pounds before you sign any lender agreement.",
+      },
+      {
+        title: "Dedicated account manager",
+        body: "One direct contact to handle lender paperwork, bank statements and compliance checks from quote to payout.",
+      },
+    ],
+    stepsTitle: "How to secure a business loan",
+    steps: [
+      {
+        title: "Tell us your funding requirement",
+        body: "Let us know how much capital you need, what it is for, and your target repayment timeline.",
+      },
+      {
+        title: "Soft-search lender matching",
+        body: "We match your profile against UK lenders to find eligible terms without harming your credit file.",
+      },
+      {
+        title: "Side-by-side offer review",
+        body: "Compare APRs, fixed monthly repayments, total interest payable, and our fee on one simple sheet.",
+      },
+      {
+        title: "Approval & funds transferred",
+        body: "Once accepted and verified, funds are transferred directly into your business bank account within 24 to 48 hours.",
+      },
+    ],
+    table: {
+      title: "UK Business Finance Facility Types",
+      headers: ["Facility Type", "Typical Borrowing", "Best Used For"],
+      rows: [
+        ["Unsecured Business Loan", "£10,000 – £250,000", "Working capital, expansion, VAT bills and stock purchases"],
+        ["Asset & Equipment Finance", "£15,000 – £500,000+", "Machinery, commercial vehicles, kitchen fits, tech upgrades"],
+        ["Revolving Credit Facility", "£5,000 – £150,000", "Flexible cash cushion where you only pay interest on drawn funds"],
+      ],
+      note: "Eligibility depends on trading history, UK company registration status and affordability assessments.",
+    },
+    sectors: [
+      "Retail & e-commerce",
+      "Pubs, cafés & restaurants",
+      "Construction & trade contractors",
+      "Transport & haulage",
+      "Care homes & private clinics",
+      "Warehousing & logistics",
+      "Professional practices",
+      "Manufacturing & fabrication",
+    ],
+    needs: [
+      "Last 3 to 6 months of business bank statements",
+      "Latest annual accounts or filed management figures",
+      "Trading history of at least 6 months in the UK",
+      "UK resident company director details",
+    ],
+    faqs: [
+      {
+        q: "Will applying for a loan quote affect my credit rating?",
+        a: "No. Our initial market eligibility check uses soft credit searches that leave no visible footprint for other lenders to see.",
+      },
+      {
+        q: "How fast can loan funds be deposited?",
+        a: "For established UK firms with clean accounts, lenders can issue approval and pay out funds within 24 to 48 hours.",
+      },
+      {
+        q: "What are the minimum requirements to qualify?",
+        a: "Your business must be UK-registered, actively trading for at least 6 months, and have minimum average monthly card or bank turnover of £5,000.",
+      },
+      {
+        q: "Can I repay my business loan early?",
+        a: "Many panel lenders permit penalty-free early repayments, which reduces your total interest cost. We flag early settlement terms on every quote.",
+      },
+    ],
+    seo: {
+      title: "Business Loans & Commercial Finance Comparison UK | West Coast Services",
+      description:
+        "Compare UK business loans and commercial asset finance. Unsecured loans, fast decisions, soft credit checks and transparent broker fees.",
+    },
+  },
+
+  // 10. Merchant Services & Card Machines
+  {
+    slug: "merchant-services",
+    num: "10",
+    group: "finance",
+    name: "Merchant services & card machines",
+    shortName: "card machines",
+    cardLine: "Next-generation card terminals, lower transaction fees and next-day payout settlements.",
+    h1: "Card machines and merchant accounts with lower processing fees and zero hidden charges.",
+    intro:
+      "Stop paying inflated card processing rates and punitive terminal rental contracts. We compare UK acquiring banks and payment providers to secure lower transaction fees, reliable smart card terminals, and next-day funding.",
+    cta: "Compare card machine rates",
+    ctaLine: "Send us your latest card processing statement. We will show you exactly how much you can save.",
+    photo: {
+      src: "/images/services/merchant-services.jpg",
+      alt: "Smart wireless card machine terminal on business counter accepting contactless payment",
+      brief: "modern smart POS terminal on wooden counter taking contactless card payment",
+    },
+    facts: [
+      { label: "Settlement", value: "Next-day bank funding" },
+      { label: "Terminal types", value: "Countertop, Mobile 4G & Smart POS" },
+      { label: "Card acceptance", value: "Visa, Mastercard, Amex, Apple Pay" },
+      { label: "Contracts", value: "Flexible terms with no rollover trap" },
+    ],
+    includedIntro: "What's included in our merchant services review:",
+    included: [
+      {
+        title: "Acquiring fee audit",
+        body: "We break down your current merchant statement, identifying interchange, scheme fees and acquirer markups.",
+      },
+      {
+        title: "Smart card terminals",
+        body: "Reliable 4G and Wi-Fi card machines with lightning-fast contactless tap, chip & PIN, and digital receipts.",
+      },
+      {
+        title: "Next-day payouts",
+        body: "Money from today's customer sales lands in your business bank account the next business day (or 7 days a week).",
+      },
+      {
+        title: "No PCI non-compliance fines",
+        body: "We help you complete self-assessment compliance so you never pay monthly £30–£50 non-compliance penalties.",
+      },
+      {
+        title: "Virtual terminals & payment links",
+        body: "Accept telephone orders and send SMS payment links directly to customers without expensive equipment.",
+      },
+      {
+        title: "Transparent interchange rates",
+        body: "Clear pricing structures (Interchange++ or flat fee) with no hidden authorisation or admin line items.",
+      },
+    ],
+    stepsTitle: "How switching card machines works",
+    steps: [
+      {
+        title: "Send your merchant statement",
+        body: "We analyze your monthly card turnover, transaction count, average ticket size, and current fee schedule.",
+      },
+      {
+        title: "Compare acquirers & hardware",
+        body: "We benchmark rates across UK payment processors and recommend the ideal terminal for your workflow.",
+      },
+      {
+        title: "Fast online setup",
+        body: "Merchant account approved and terminals dispatched pre-configured to your business out of the box.",
+      },
+      {
+        title: "Plug in & start saving",
+        body: "Plug in and start taking payments immediately. We assist with cancelling your previous terminal lease.",
+      },
+    ],
+    table: {
+      title: "Card Terminal Options for UK Businesses",
+      headers: ["Terminal Type", "Connectivity", "Ideal Business Setup"],
+      rows: [
+        ["Countertop Smart POS", "Ethernet & Wi-Fi", "Retail shops, salons, trade counters, convenience stores"],
+        ["Portable / At-the-Table", "Wi-Fi & Bluetooth", "Pubs, restaurants, cafés and hotel hospitality"],
+        ["Mobile 4G All-in-One", "Built-in Roaming 4G SIM", "Trades, market stalls, delivery drivers, mobile businesses"],
+      ],
+      note: "PCI-DSS certified, UK bank compliant, and ready for all UK contactless and chip transactions.",
+    },
+    sectors: [
+      "Restaurants, pubs & bars",
+      "Retail shops & boutiques",
+      "Hair salons & barbers",
+      "Trades & home services",
+      "Hotels & guesthouses",
+      "Garages & MOT stations",
+      "Pharmacies & health clinics",
+      "Bakeries & takeaway food",
+    ],
+    needs: [
+      "Recent merchant statement (1 month showing transaction breakdown)",
+      "Estimated monthly card turnover (or new business estimate)",
+      "Business bank account details for settlement payouts",
+      "Proof of trading address or photo ID for compliance",
+    ],
+    faqs: [
+      {
+        q: "How much can my business save on card processing?",
+        a: "Most UK retail and hospitality firms save between 20% and 40% on card processing fees by switching from legacy high-street bank contracts.",
+      },
+      {
+        q: "Do your card machines accept Apple Pay and Google Pay?",
+        a: "Yes. All terminals include contactless NFC supporting Apple Pay, Google Wallet, Samsung Pay, and all contactless debit and credit cards.",
+      },
+      {
+        q: "What happens if my Wi-Fi goes down?",
+        a: "Our mobile and portable smart terminals feature automatic 4G SIM failover, switching seamlessly to mobile data so you never miss a sale.",
+      },
+      {
+        q: "What are PCI-DSS non-compliance fees and how do you stop them?",
+        a: "Many payment providers charge £30 to £60 monthly if you don't file annual compliance. We guide you through the 10-minute online form so you avoid these fines completely.",
+      },
+    ],
+    seo: {
+      title: "Card Machines & Merchant Services UK | West Coast Services",
+      description:
+        "Compare UK merchant services and card machine terminals. Lower processing fees, next-day settlement payouts, 4G smart POS hardware and zero PCI penalty fees.",
+    },
+  },
 ];
 
 export const getService = (slug: string): Service | undefined => {
-  return services.find((s) => s.slug === slug);
+  return services.find(
+    (s) => s.slug === slug || (slug === "card-machines" && s.slug === "merchant-services")
+  );
 };
 
 export const getSameCategoryServices = (slug: string): Service[] => {

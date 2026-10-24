@@ -19,6 +19,7 @@ export interface HomeContent {
     h2: string;
     intro: string;
     utilitiesHeading: string;
+    financeHeading?: string;
     digitalHeading: string;
   };
   calculator: {
@@ -88,6 +89,8 @@ export const homeContent: HomeContent = {
     "Gas",
     "Water",
     "Waste",
+    "Business loans",
+    "Card machines",
     "Websites",
     "Social media",
     "SEO",
@@ -96,11 +99,12 @@ export const homeContent: HomeContent = {
     "Renewals tracked",
   ],
   serviceIndex: {
-    h2: "Two jobs. Done properly.",
+    h2: "Three jobs. Done properly.",
     intro:
-      "Use us for one or both. Most clients start with a bill check, then ask about marketing once they've seen how we work.",
+      "Use us for one or all three. Cut what you spend on utilities, secure commercial finance and low-fee card machines, or grow with our digital team.",
     utilitiesHeading: "A — Energy & utilities",
-    digitalHeading: "B — Digital marketing",
+    financeHeading: "B — Loans & card machines",
+    digitalHeading: "C — Digital marketing",
   },
   calculator: {
     label: "Rough savings estimate",
@@ -109,7 +113,7 @@ export const homeContent: HomeContent = {
       "Pick a utility and slide to roughly what you pay each month. For a real figure we need a bill — this just gives you a feel for it.",
     savingRate: 0.2, // 20% reduction assumption
     disclaimer:
-      "Illustration only, assuming a 20% reduction. [Client to confirm the figure they're happy to publish.] Real savings depend on usage, meter type, contract end date and market prices on the day.",
+      "Illustration only, assuming an average 20% tariff reduction. Real savings depend on annual usage, meter type, contract end date and live UK wholesale market prices on the day.",
     types: ["Electricity", "Gas", "Water", "Waste"],
   },
   process: {
