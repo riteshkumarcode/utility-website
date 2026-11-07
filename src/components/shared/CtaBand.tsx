@@ -15,11 +15,11 @@ export function CtaBand({
 }: CtaBandProps) {
   return (
     <section className={`max-w-[1280px] mx-auto px-6 py-16 md:py-20 ${className}`}>
-      <div className="bg-signal rounded-[6px] p-10 md:p-14 flex flex-wrap justify-between items-center gap-8 text-ink">
-        <h2 className="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl tracking-[-0.03em] leading-tight m-0 max-w-2xl">
+      <div className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 rounded-[6px] p-10 md:p-14 flex flex-wrap justify-between items-center gap-8 text-ink shadow-lg shadow-emerald-500/20">
+        <h2 className="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl tracking-[-0.03em] leading-tight m-0 max-w-2xl text-ink">
           {headline}
         </h2>
-        <Button variant="primary" href={buttonHref} size="large">
+        <Button variant="outline" href={buttonHref} size="large" className="bg-white text-emerald-950 hover:bg-emerald-50 border-white shadow-md font-extrabold">
           {buttonText}
         </Button>
       </div>

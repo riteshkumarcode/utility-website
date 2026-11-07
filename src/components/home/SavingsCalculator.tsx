@@ -55,8 +55,8 @@ export function SavingsCalculator() {
                   onClick={() => setSelectedUtility(t)}
                   className={`px-3.5 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-base font-bold border-r border-line last:border-r-0 transition-colors cursor-pointer min-h-[40px] sm:min-h-[44px] ${
                     isSelected
-                      ? "bg-ink text-on-dark"
-                      : "bg-transparent text-ink hover:bg-stone/50"
+                      ? "bg-signal text-ink shadow-xs"
+                      : "bg-transparent text-ink hover:bg-emerald-50"
                   }`}
                 >
                   {t}
@@ -102,16 +102,16 @@ export function SavingsCalculator() {
         </div>
 
         {/* Right Output Panel with Dynamic Motion Graphic */}
-        <div className="flex-[1_1_320px] min-w-0 bg-ink text-on-dark p-5 sm:p-8 md:p-12 flex flex-col justify-between gap-6 sm:gap-8 relative overflow-hidden">
+        <div className="flex-[1_1_320px] min-w-0 bg-gradient-to-br from-[#0B1512] via-slate-900 to-[#0A1A14] text-on-dark p-5 sm:p-8 md:p-12 flex flex-col justify-between gap-6 sm:gap-8 relative overflow-hidden">
           {/* Subtle background glow */}
           <div
             aria-hidden="true"
-            className="absolute -right-20 -top-20 w-56 h-56 rounded-full bg-signal/10 blur-3xl pointer-events-none"
+            className="absolute -right-20 -top-20 w-56 h-56 rounded-full bg-signal/20 blur-3xl pointer-events-none"
           />
 
           <div>
             <div className="flex justify-between items-center">
-              <div className="font-mono text-xs uppercase tracking-[0.14em] text-[#8B8F86]">
+              <div className="font-mono text-xs uppercase tracking-[0.14em] text-emerald-200/70">
                 Could be back in your account
               </div>
 
@@ -123,7 +123,7 @@ export function SavingsCalculator() {
                     cy="40"
                     r="34"
                     fill="none"
-                    stroke="#2B302B"
+                    stroke="#16382A"
                     strokeWidth="5"
                   />
                   <motion.circle
@@ -131,7 +131,7 @@ export function SavingsCalculator() {
                     cy="40"
                     r="34"
                     fill="none"
-                    stroke="#FF5B1F"
+                    stroke="#00D084"
                     strokeWidth="5.5"
                     strokeLinecap="round"
                     strokeDasharray={circleCircumference}
@@ -139,7 +139,7 @@ export function SavingsCalculator() {
                     transition={{ duration: 0.5, ease: "easeOut" }}
                   />
                 </svg>
-                <div className="absolute inset-0 flex items-center justify-center font-mono text-[10px] font-bold text-signal">
+                <div className="absolute inset-0 flex items-center justify-center font-mono text-[10px] font-bold text-signal shadow-xs">
                   -20%
                 </div>
               </div>
@@ -150,12 +150,12 @@ export function SavingsCalculator() {
               initial={shouldReduceMotion ? false : { opacity: 0.8, y: -6 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.25 }}
-              className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-signal tracking-[-0.03em] leading-none mt-4 break-words"
+              className="font-display font-extrabold text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-signal drop-shadow-[0_2px_14px_rgba(0,208,132,0.35)] tracking-[-0.03em] leading-none mt-4 break-words"
             >
               £{fmt(annualSaving)}
             </motion.div>
 
-            <div className="text-[#C9CBC4] text-sm sm:text-base mt-3 flex items-center gap-2">
+            <div className="text-emerald-100/80 text-sm sm:text-base mt-3 flex items-center gap-2">
               <span>a year</span>
               <span className="text-signal">·</span>
               <span>about £{fmt(monthlySaving)} a month</span>

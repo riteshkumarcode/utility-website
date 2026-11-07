@@ -49,8 +49,8 @@ export function Chip(props: ChipProps) {
       disabled={disabled}
       className={`inline-flex items-center justify-center rounded-full border font-semibold transition-all duration-200 cursor-pointer focus-visible:outline-2 focus-visible:outline-ink focus-visible:outline-offset-2 ${sizeStyles} ${
         pressed
-          ? "bg-ink text-on-dark border-ink"
-          : "bg-transparent text-ink border-[#B9B9AE] hover:border-ink active:border-ink"
+          ? "bg-signal text-ink font-bold border-signal shadow-sm"
+          : "bg-transparent text-ink border-line hover:border-emerald-500 hover:bg-emerald-50/50"
       } ${disabled ? "opacity-50 cursor-not-allowed" : ""} ${className}`}
     >
       {children}

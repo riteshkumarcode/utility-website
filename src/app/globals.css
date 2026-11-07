@@ -3,14 +3,15 @@
 @theme {
   --color-paper: #FFFFFF;
   --color-paper-2: #F8FAFC;
-  --color-stone: #F1F4F9;
+  --color-stone: #F0FDF4;
   --color-ink: #0F172A;
   --color-ink-2: #334155;
   --color-muted: #64748B;
   --color-line: #E2E8F0;
-  --color-line-dark: #222831;
-  --color-signal: #FF5500;
-  --color-rust: #D9480F;
+  --color-line-dark: #1E293B;
+  --color-signal: #00D084;
+  --color-rust: #0891B2;
+  --color-cyan: #06B6D4;
   --color-on-dark: #FFFFFF;
   --color-on-dark-muted: #CBD5E1;
 
@@ -25,14 +26,15 @@
 :root {
   --paper: #FFFFFF;
   --paper-2: #F8FAFC;
-  --stone: #F1F4F9;
+  --stone: #F0FDF4;
   --ink: #0F172A;
   --ink-2: #334155;
   --muted: #64748B;
   --line: #E2E8F0;
-  --line-dark: #222831;
-  --signal: #FF5500;
-  --rust: #D9480F;
+  --line-dark: #1E293B;
+  --signal: #00D084;
+  --rust: #0891B2;
+  --cyan: #06B6D4;
 }
 
 html {

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import React, { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
@@ -99,22 +100,24 @@ export function SiteNav() {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 28, stiffness: 300 }}
-            className="fixed inset-y-0 right-0 w-full max-w-md bg-ink text-on-dark flex flex-col h-[100dvh] max-h-[100dvh] shadow-2xl border-l border-line-dark/80 overflow-y-auto overscroll-contain"
+            className="fixed inset-y-0 right-0 w-full max-w-md bg-white text-ink flex flex-col h-[100dvh] max-h-[100dvh] shadow-2xl border-l border-emerald-100 overflow-y-auto overscroll-contain"
           >
             {/* Drawer Header */}
-            <div className="sticky top-0 z-10 bg-ink/95 backdrop-blur-sm flex items-center justify-between px-5 py-4 border-b border-line-dark">
+            <div className="sticky top-0 z-10 bg-white/95 backdrop-blur-sm flex items-center justify-between px-5 py-4 border-b border-line">
               <Link
                 href="/"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center gap-2.5 font-display font-black text-xl text-on-dark"
+                aria-label={`${siteConfig.name} home`}
+                className="flex items-center gap-2.5"
               >
-                <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true" className="shrink-0">
-                  <circle cx="12" cy="12" r="10" fill="none" stroke="#F1F1EC" strokeWidth="2.4" />
-                  <path d="M5.5 15.5a7 7 0 0 1 13 0" fill="none" stroke="#F1F1EC" strokeWidth="1.2" strokeDasharray="1.2 1.6" />
-                  <line className="animate-sway" x1="12" y1="13" x2="16.5" y2="8" stroke="#FF5B1F" strokeWidth="2.4" strokeLinecap="round" />
-                  <circle cx="12" cy="13" r="1.8" fill="#F1F1EC" />
-                </svg>
-                <span>{siteConfig.name}</span>
+                <Image
+                  src="/images/logo/wcs-horizontal-colour.svg"
+                  alt={siteConfig.name}
+                  width={180}
+                  height={37}
+                  className="h-8 sm:h-9 w-auto"
+                  priority
+                />
               </Link>
 
               <button
@@ -124,7 +127,7 @@ export function SiteNav() {
                   openButtonRef.current?.focus();
                 }}
                 aria-label="Close navigation menu"
-                className="w-11 h-11 flex items-center justify-center text-on-dark hover:text-signal hover:bg-white/10 rounded-[4px] transition-colors focus-visible:outline-2 focus-visible:outline-signal cursor-pointer"
+                className="w-11 h-11 flex items-center justify-center text-ink hover:text-emerald-700 hover:bg-emerald-50 rounded-[4px] transition-colors focus-visible:outline-2 focus-visible:outline-signal cursor-pointer"
               >
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round">
                   <path d="M18 6L6 18M6 6l12 12" />
@@ -140,7 +143,7 @@ export function SiteNav() {
                   href="/"
                   onClick={() => setMobileMenuOpen(false)}
                   className={`flex items-center justify-between py-3 px-3 rounded-[4px] font-display font-extrabold text-2xl tracking-[-0.02em] transition-colors ${
-                    pathname === "/" ? "bg-signal text-ink" : "text-on-dark hover:bg-white/5 hover:text-signal"
+                    pathname === "/" ? "bg-signal text-ink shadow-xs" : "text-ink hover:bg-emerald-50 hover:text-emerald-700"
                   }`}
                 >
                   <span>Home</span>
@@ -151,7 +154,7 @@ export function SiteNav() {
                   href="/about"
                   onClick={() => setMobileMenuOpen(false)}
                   className={`flex items-center justify-between py-3 px-3 rounded-[4px] font-display font-extrabold text-2xl tracking-[-0.02em] transition-colors ${
-                    isActive("/about") ? "bg-signal text-ink" : "text-on-dark hover:bg-white/5 hover:text-signal"
+                    isActive("/about") ? "bg-signal text-ink shadow-xs" : "text-ink hover:bg-emerald-50 hover:text-emerald-700"
                   }`}
                 >
                   <span>About Us</span>
@@ -162,7 +165,7 @@ export function SiteNav() {
                   href="/services"
                   onClick={() => setMobileMenuOpen(false)}
                   className={`flex items-center justify-between py-3 px-3 rounded-[4px] font-display font-extrabold text-2xl tracking-[-0.02em] transition-colors ${
-                    pathname === "/services" ? "bg-signal text-ink" : "text-on-dark hover:bg-white/5 hover:text-signal"
+                    pathname === "/services" ? "bg-signal text-ink shadow-xs" : "text-ink hover:bg-emerald-50 hover:text-emerald-700"
                   }`}
                 >
                   <span>All 10 Services</span>
@@ -171,12 +174,12 @@ export function SiteNav() {
               </nav>
 
               {/* Energy & Utilities Section */}
-              <div className="border-t border-line-dark pt-5">
+              <div className="border-t border-line pt-5">
                 <div className="flex items-center justify-between pb-2 px-1">
                   <Link
                     href="/services/utilities"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="font-mono text-xs uppercase tracking-[0.14em] text-signal font-bold hover:underline"
+                    className="font-mono text-xs uppercase tracking-[0.14em] text-emerald-700 font-bold hover:underline"
                   >
                     Energy &amp; Utilities Hub →
                   </Link>
@@ -184,7 +187,7 @@ export function SiteNav() {
                     type="button"
                     onClick={() => setUtilitiesOpen(!utilitiesOpen)}
                     aria-label="Toggle utility services list"
-                    className="text-xs text-[#8B8F86] hover:text-on-dark p-1"
+                    className="text-xs text-muted hover:text-ink p-1 font-medium"
                   >
                     {utilitiesOpen ? "Hide" : "Show"}
                   </button>
@@ -198,14 +201,14 @@ export function SiteNav() {
                         href={item.href}
                         onClick={() => setMobileMenuOpen(false)}
                         className={`flex items-center justify-between py-2.5 px-3 rounded-[4px] text-sm font-semibold transition-colors ${
-                          isActive(item.href) ? "bg-white/15 text-signal" : "text-[#C9CBC4] hover:bg-white/5 hover:text-on-dark"
+                          isActive(item.href) ? "bg-emerald-50 text-emerald-800 font-bold border-l-2 border-signal" : "text-ink-2 hover:bg-emerald-50/60 hover:text-emerald-800"
                         }`}
                       >
                         <span className="flex items-center gap-2.5">
-                          <span className="font-mono text-xs text-[#8B8F86]">{item.num}</span>
+                          <span className="font-mono text-xs text-emerald-600 font-bold">{item.num}</span>
                           <span>{item.name}</span>
                         </span>
-                        <span className="text-xs text-signal">→</span>
+                        <span className="text-xs text-emerald-600">→</span>
                       </Link>
                     ))}
                   </div>
@@ -213,12 +216,12 @@ export function SiteNav() {
               </div>
 
               {/* Business Finance & Card Machines Section */}
-              <div className="border-t border-line-dark pt-5">
+              <div className="border-t border-line pt-5">
                 <div className="flex items-center justify-between pb-2 px-1">
                   <Link
                     href="/services/finance"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="font-mono text-xs uppercase tracking-[0.14em] text-signal font-bold hover:underline"
+                    className="font-mono text-xs uppercase tracking-[0.14em] text-emerald-700 font-bold hover:underline"
                   >
                     Finance &amp; Card Machines Hub →
                   </Link>
@@ -226,7 +229,7 @@ export function SiteNav() {
                     type="button"
                     onClick={() => setFinanceOpen(!financeOpen)}
                     aria-label="Toggle finance services list"
-                    className="text-xs text-[#8B8F86] hover:text-on-dark p-1"
+                    className="text-xs text-muted hover:text-ink p-1 font-medium"
                   >
                     {financeOpen ? "Hide" : "Show"}
                   </button>
@@ -240,14 +243,14 @@ export function SiteNav() {
                         href={item.href}
                         onClick={() => setMobileMenuOpen(false)}
                         className={`flex items-center justify-between py-2.5 px-3 rounded-[4px] text-sm font-semibold transition-colors ${
-                          isActive(item.href) ? "bg-white/15 text-signal" : "text-[#C9CBC4] hover:bg-white/5 hover:text-on-dark"
+                          isActive(item.href) ? "bg-emerald-50 text-emerald-800 font-bold border-l-2 border-signal" : "text-ink-2 hover:bg-emerald-50/60 hover:text-emerald-800"
                         }`}
                       >
                         <span className="flex items-center gap-2.5">
-                          <span className="font-mono text-xs text-[#8B8F86]">{item.num}</span>
+                          <span className="font-mono text-xs text-emerald-600 font-bold">{item.num}</span>
                           <span>{item.name}</span>
                         </span>
-                        <span className="text-xs text-signal">→</span>
+                        <span className="text-xs text-emerald-600">→</span>
                       </Link>
                     ))}
                   </div>
@@ -255,12 +258,12 @@ export function SiteNav() {
               </div>
 
               {/* Digital Marketing Section */}
-              <div className="border-t border-line-dark pt-5">
+              <div className="border-t border-line pt-5">
                 <div className="flex items-center justify-between pb-2 px-1">
                   <Link
                     href="/services/digital"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="font-mono text-xs uppercase tracking-[0.14em] text-signal font-bold hover:underline"
+                    className="font-mono text-xs uppercase tracking-[0.14em] text-emerald-700 font-bold hover:underline"
                   >
                     Digital Studio Hub →
                   </Link>
@@ -268,7 +271,7 @@ export function SiteNav() {
                     type="button"
                     onClick={() => setDigitalOpen(!digitalOpen)}
                     aria-label="Toggle digital services list"
-                    className="text-xs text-[#8B8F86] hover:text-on-dark p-1"
+                    className="text-xs text-muted hover:text-ink p-1 font-medium"
                   >
                     {digitalOpen ? "Hide" : "Show"}
                   </button>
@@ -282,14 +285,14 @@ export function SiteNav() {
                         href={item.href}
                         onClick={() => setMobileMenuOpen(false)}
                         className={`flex items-center justify-between py-2.5 px-3 rounded-[4px] text-sm font-semibold transition-colors ${
-                          isActive(item.href) ? "bg-white/15 text-signal" : "text-[#C9CBC4] hover:bg-white/5 hover:text-on-dark"
+                          isActive(item.href) ? "bg-emerald-50 text-emerald-800 font-bold border-l-2 border-signal" : "text-ink-2 hover:bg-emerald-50/60 hover:text-emerald-800"
                         }`}
                       >
                         <span className="flex items-center gap-2.5">
-                          <span className="font-mono text-xs text-[#8B8F86]">{item.num}</span>
+                          <span className="font-mono text-xs text-emerald-600 font-bold">{item.num}</span>
                           <span>{item.name}</span>
                         </span>
-                        <span className="text-xs text-signal">→</span>
+                        <span className="text-xs text-emerald-600">→</span>
                       </Link>
                     ))}
                   </div>
@@ -297,11 +300,11 @@ export function SiteNav() {
               </div>
 
               {/* Contact & Free Quote Direct Actions */}
-              <div className="border-t border-line-dark pt-6 space-y-3.5">
+              <div className="border-t border-line pt-6 space-y-3.5">
                 <Link
                   href="/contact"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="w-full flex items-center justify-between bg-signal text-ink font-bold text-base p-4 rounded-[4px] min-h-[50px] shadow-lg hover:bg-white transition-colors"
+                  className="w-full flex items-center justify-between bg-signal text-ink font-extrabold text-base p-4 rounded-[4px] min-h-[50px] shadow-md hover:bg-[#00ea94] transition-colors"
                 >
                   <span>Get a free bill check</span>
                   <Arrow size={18} />
@@ -309,23 +312,23 @@ export function SiteNav() {
 
                 <a
                   href={`tel:${siteConfig.phone.replace(/[^0-9+]/g, "")}`}
-                  className="w-full flex items-center justify-between border border-line-dark bg-[#161916] text-on-dark font-mono text-sm p-3.5 rounded-[4px] hover:border-signal transition-colors"
+                  className="w-full flex items-center justify-between border border-emerald-200 bg-emerald-50/70 text-emerald-950 font-mono text-sm p-3.5 rounded-[4px] hover:border-signal transition-colors"
                 >
                   <span className="flex items-center gap-2.5">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF5B1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00D084" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                     </svg>
-                    <span>{siteConfig.phone}</span>
+                    <span className="font-bold">{siteConfig.phone}</span>
                   </span>
-                  <span className="text-xs text-signal font-bold">Call Now</span>
+                  <span className="text-xs text-emerald-700 font-bold">Call Now</span>
                 </a>
 
-                <div className="pt-2 text-xs font-mono text-[#8B8F86] space-y-1.5 px-1">
+                <div className="pt-2 text-xs font-mono text-muted space-y-1.5 px-1">
                   <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                    <span className="text-[#C9CBC4]">Lines Open {siteConfig.openingHours}</span>
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                    <span className="text-ink-2">Lines Open {siteConfig.openingHours}</span>
                   </div>
-                  <div>Email: <a href={`mailto:${siteConfig.email}`} className="text-on-dark hover:text-signal underline">{siteConfig.email}</a></div>
+                  <div>Email: <a href={`mailto:${siteConfig.email}`} className="text-ink font-semibold hover:text-emerald-700 underline">{siteConfig.email}</a></div>
                 </div>
               </div>
             </div>
@@ -345,43 +348,16 @@ export function SiteNav() {
         <Link
           href="/"
           aria-label={`${siteConfig.name} home`}
-          className="flex items-center gap-2 sm:gap-2.5 font-display font-black text-xl sm:text-2xl md:text-[27px] tracking-[-0.035em] text-ink focus-visible:outline-2 focus-visible:outline-ink focus-visible:outline-offset-4"
+          className="flex items-center focus-visible:outline-2 focus-visible:outline-ink focus-visible:outline-offset-4 group"
         >
-          <svg
-            width="28"
-            height="28"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-            className="shrink-0 sm:w-8 sm:h-8"
-          >
-            <circle
-              cx="12"
-              cy="12"
-              r="10"
-              fill="none"
-              stroke="#121512"
-              strokeWidth="2.4"
-            />
-            <path
-              d="M5.5 15.5a7 7 0 0 1 13 0"
-              fill="none"
-              stroke="#121512"
-              strokeWidth="1.2"
-              strokeDasharray="1.2 1.6"
-            />
-            <line
-              className="animate-sway"
-              x1="12"
-              y1="13"
-              x2="16.5"
-              y2="8"
-              stroke="#FF5B1F"
-              strokeWidth="2.4"
-              strokeLinecap="round"
-            />
-            <circle cx="12" cy="13" r="1.8" fill="#121512" />
-          </svg>
-          <span className="truncate">{siteConfig.name}</span>
+          <Image
+            src="/images/logo/wcs-horizontal-colour.svg"
+            alt={siteConfig.name}
+            width={220}
+            height={45}
+            priority
+            className="h-9 sm:h-10 md:h-[42px] w-auto transition-transform group-hover:scale-[1.02]"
+          />
         </Link>
 
         {/* Desktop Nav Links (hidden under lg) */}
@@ -394,8 +370,8 @@ export function SiteNav() {
                 href={link.href}
                 className={`py-2 transition-colors relative ${
                   active
-                    ? "text-ink font-bold after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-signal"
-                    : "text-ink hover:text-rust"
+                    ? "text-ink font-extrabold after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2.5px] after:bg-signal"
+                    : "text-ink hover:text-emerald-700"
                 }`}
               >
                 {link.label}
@@ -408,7 +384,7 @@ export function SiteNav() {
         <div className="hidden sm:flex items-center gap-4">
           <Link
             href="/contact"
-            className="group inline-flex items-center justify-center gap-2.5 bg-signal text-ink font-bold text-sm sm:text-[15px] px-4 sm:px-5 py-2.5 sm:py-3 rounded-[4px] min-h-[42px] sm:min-h-[46px] transition-colors duration-200 hover:bg-ink hover:text-on-dark focus-visible:outline-2 focus-visible:outline-ink focus-visible:outline-offset-2"
+            className="group inline-flex items-center justify-center gap-2.5 bg-signal text-ink font-extrabold text-sm sm:text-[15px] px-4 sm:px-5 py-2.5 sm:py-3 rounded-[4px] min-h-[42px] sm:min-h-[46px] transition-all duration-200 hover:bg-[#00ea94] active:bg-[#00bd78] shadow-sm hover:shadow-md hover:shadow-emerald-500/20 focus-visible:outline-2 focus-visible:outline-ink focus-visible:outline-offset-2"
           >
             <span>Free bill check</span>
             <Arrow className="group-hover:translate-x-1.5" size={16} />

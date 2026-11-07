@@ -5,48 +5,48 @@ export function ContactAside() {
   return (
     <aside className="space-y-6">
       {/* Talk to a Person card */}
-      <div className="bg-ink text-on-dark rounded-[6px] p-8 space-y-6 shadow-lg">
-        <div className="font-mono text-xs uppercase tracking-[0.14em] text-[#8B8F86] flex items-center gap-2.5">
-          <span className="w-2 h-2 rounded-full bg-signal animate-blink" aria-hidden="true" />
+      <div className="bg-emerald-50/90 border border-emerald-200/90 text-emerald-950 rounded-[6px] p-8 space-y-6 shadow-sm">
+        <div className="font-mono text-xs uppercase tracking-[0.14em] text-emerald-800 flex items-center gap-2.5 font-bold">
+          <span className="w-2 h-2 rounded-full bg-signal animate-blink shadow-[0_0_8px_#00D084]" aria-hidden="true" />
           Talk to a person
         </div>
 
         <a
           href={`tel:${siteConfig.phone.replace(/[^0-9+]/g, "")}`}
-          className="block font-display font-extrabold text-3xl sm:text-4xl tracking-[-0.02em] text-on-dark hover:text-signal transition-colors leading-none"
+          className="block font-display font-extrabold text-3xl sm:text-4xl tracking-[-0.02em] text-emerald-950 hover:text-emerald-700 transition-colors leading-none"
         >
           {siteConfig.phone}
         </a>
 
         <div className="flex flex-col gap-2 pt-1 font-mono text-xs sm:text-sm">
           <div className="flex flex-wrap items-baseline gap-2">
-            <span className="text-[#8B8F86] uppercase tracking-wider text-[11px]">Enquiries:</span>
+            <span className="text-emerald-700 uppercase tracking-wider text-[11px] font-bold">Enquiries:</span>
             <a
               href={`mailto:${siteConfig.email}`}
-              className="text-on-dark hover:text-signal transition-colors underline"
+              className="text-emerald-950 hover:text-emerald-700 font-medium transition-colors underline"
             >
               {siteConfig.email}
             </a>
           </div>
           <div className="flex flex-wrap items-baseline gap-2">
-            <span className="text-[#8B8F86] uppercase tracking-wider text-[11px]">Sales:</span>
+            <span className="text-emerald-700 uppercase tracking-wider text-[11px] font-bold">Sales:</span>
             <a
               href={`mailto:${siteConfig.salesEmail}`}
-              className="text-on-dark hover:text-signal transition-colors underline"
+              className="text-emerald-950 hover:text-emerald-700 font-medium transition-colors underline"
             >
               {siteConfig.salesEmail}
             </a>
           </div>
         </div>
 
-        <div className="border-t border-line-dark pt-5 text-sm space-y-2 text-[#C9CBC4]">
+        <div className="border-t border-emerald-200/80 pt-5 text-sm space-y-2 text-emerald-900">
           <div className="flex justify-between">
             <span>Opening hours</span>
-            <span className="font-mono text-on-dark">{siteConfig.openingHours}</span>
+            <span className="font-mono text-emerald-950 font-bold">{siteConfig.openingHours}</span>
           </div>
           <div className="flex justify-between">
             <span>Saturday – Sunday</span>
-            <span className="font-mono text-on-dark">Closed</span>
+            <span className="font-mono text-emerald-950 font-bold">Closed</span>
           </div>
         </div>
       </div>

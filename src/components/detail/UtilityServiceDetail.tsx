@@ -265,24 +265,24 @@ export function UtilityServiceDetail({
         </div>
       </section>
 
-      {/* 6. How an Electricity/Gas/Water Switch Works (Ink dark section) */}
-      <section className="bg-ink text-on-dark my-10 sm:my-14">
+      {/* 6. How an Electricity/Gas/Water Switch Works (Bright Modern Section) */}
+      <section className="bg-gradient-to-br from-emerald-50/70 via-white to-cyan-50/60 border-y border-emerald-100/90 text-ink my-10 sm:my-14">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-14 sm:py-20 md:py-24">
-          <SectionLabel light>Clear Switch Process</SectionLabel>
-          <h2 className="font-display font-extrabold text-2xl sm:text-4xl md:text-5xl tracking-[-0.03em] mt-3 m-0">
+          <SectionLabel>Clear Switch Process</SectionLabel>
+          <h2 className="font-display font-extrabold text-2xl sm:text-4xl md:text-5xl tracking-[-0.03em] mt-3 m-0 text-ink">
             {service.stepsTitle}
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-10 sm:mt-14 border-t border-line-dark pt-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-10 sm:mt-14 border-t border-emerald-200/80 pt-8">
             {service.steps.map((step, idx) => (
               <div key={step.title} className="space-y-2 sm:space-y-3">
-                <div className="font-display font-extrabold text-4xl sm:text-5xl md:text-6xl text-signal leading-none">
+                <div className="font-mono text-sm sm:text-base font-extrabold text-emerald-700 bg-emerald-100/80 px-2.5 py-1 rounded-[4px] w-fit border border-emerald-200">
                   0{idx + 1}
                 </div>
-                <h3 className="font-display font-bold text-lg sm:text-xl text-on-dark pt-1 m-0">
+                <h3 className="font-display font-bold text-lg sm:text-xl text-ink pt-1 m-0">
                   {step.title}
                 </h3>
-                <p className="text-sm text-[#C9CBC4] leading-relaxed m-0">
+                <p className="text-sm text-ink-2 leading-relaxed m-0">
                   {step.body}
                 </p>
               </div>
@@ -305,12 +305,12 @@ export function UtilityServiceDetail({
           </div>
         </div>
 
-        <div className="overflow-x-auto border-2 border-ink rounded-[6px] bg-paper-2">
+        <div className="overflow-x-auto border-2 border-emerald-500/30 rounded-[6px] bg-paper-2 shadow-xs">
           <table className="w-full text-left border-collapse min-w-[540px]">
             <thead>
-              <tr className="bg-ink text-on-dark font-mono text-xs uppercase tracking-[0.1em]">
+              <tr className="bg-[#0B1512] text-emerald-100 font-mono text-xs uppercase tracking-[0.1em]">
                 {service.table.headers.map((h) => (
-                  <th key={h} className="p-3.5 sm:p-5 border-r border-line-dark last:border-r-0">
+                  <th key={h} className="p-3.5 sm:p-5 border-r border-emerald-900/60 last:border-r-0">
                     {h}
                   </th>
                 ))}

@@ -27,7 +27,7 @@ export default function Image() {
             style={{
               width: "16px",
               height: "16px",
-              background: "#FF5B1F",
+              background: "#00D084",
             }}
           />
           <span
@@ -61,7 +61,7 @@ export default function Image() {
             style={{
               width: "220px",
               height: "8px",
-              background: "#FF5B1F",
+              background: "#00D084",
             }}
           />
         </div>

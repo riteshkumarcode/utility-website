@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { siteConfig } from "@/content/site";
 
@@ -68,16 +69,16 @@ export function SiteFooter() {
       {/* Top Animated Gradient Accent Line */}
       <div
         aria-hidden="true"
-        className="h-1 w-full bg-gradient-to-r from-signal via-[#FF7E47] to-signal opacity-90"
+        className="h-1.5 w-full bg-gradient-to-r from-[#00D084] via-[#06B6D4] to-[#00D084] opacity-95"
       />
 
       {/* Live Telemetry & Status Bar */}
-      <div className="border-b border-line-dark/80 bg-[#0E110E] py-2.5 px-6">
+      <div className="border-b border-emerald-950/60 bg-[#0B1512] py-2.5 px-6">
         <div className="max-w-[1280px] mx-auto flex flex-wrap justify-between items-center gap-3 font-mono text-xs text-[#8B8F86]">
           <div className="flex items-center gap-3">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-signal opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-signal" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-signal shadow-[0_0_8px_#00D084]" />
             </span>
             <span className="text-on-dark font-semibold">UK Operations Live</span>
             <span className="text-line-dark">|</span>
@@ -110,9 +111,16 @@ export function SiteFooter() {
           <div className="flex flex-col gap-3.5 lg:col-span-1">
             <Link
               href="/"
-              className="font-display font-black text-3xl text-on-dark tracking-[-0.03em] hover:text-signal transition-colors inline-block group"
+              aria-label={`${siteConfig.name} home`}
+              className="inline-block group focus-visible:outline-2 focus-visible:outline-signal focus-visible:outline-offset-4 mb-0.5"
             >
-              <span>{siteConfig.name}</span>
+              <Image
+                src="/images/logo/wcs-horizontal-white.svg"
+                alt={siteConfig.name}
+                width={220}
+                height={45}
+                className="h-10 sm:h-11 w-auto transition-opacity group-hover:opacity-90"
+              />
             </Link>
             <p className="text-sm leading-relaxed max-w-[280px] text-[#A6AAA0] m-0">
               Business utilities, commercial finance and digital marketing for UK companies. {siteConfig.address.town}, {siteConfig.address.county}.
@@ -290,7 +298,7 @@ export function SiteFooter() {
                   <span
                     className={`inline-block rounded-full shrink-0 ${
                       item.isBrand
-                        ? "w-3 h-3 bg-signal shadow-[0_0_10px_#FF5B1F]"
+                        ? "w-3 h-3 bg-signal shadow-[0_0_10px_#00D084]"
                         : "w-2 h-2 bg-[#444A43]"
                     }`}
                   />
@@ -314,7 +322,7 @@ export function SiteFooter() {
                   <span
                     className={`inline-block rounded-full shrink-0 ${
                       item.isBrand
-                        ? "w-3 h-3 bg-signal shadow-[0_0_10px_#FF5B1F]"
+                        ? "w-3 h-3 bg-signal shadow-[0_0_10px_#00D084]"
                         : "w-2 h-2 bg-[#444A43]"
                     }`}
                   />

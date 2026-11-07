@@ -67,14 +67,14 @@ export function ServicesDirectoryClient() {
         <div
           role="group"
           aria-label="Filter services by category"
-          className="inline-flex flex-wrap border-[1.5px] border-ink rounded-[4px] overflow-hidden mt-8 sm:mt-10 max-w-full"
+          className="inline-flex flex-wrap border-[1.5px] border-emerald-600/40 rounded-[4px] overflow-hidden mt-8 sm:mt-10 max-w-full shadow-xs"
         >
           <button
             type="button"
             onClick={() => setFilterAndHash("all")}
             aria-pressed={filter === "all"}
             className={`px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-[15px] font-bold border-r border-line transition-colors cursor-pointer min-h-[44px] sm:min-h-[48px] ${
-              filter === "all" ? "bg-ink text-on-dark" : "bg-transparent text-ink hover:bg-stone/40"
+              filter === "all" ? "bg-signal text-ink shadow-xs" : "bg-transparent text-ink hover:bg-emerald-50"
             }`}
           >
             All Services (10)
@@ -84,7 +84,7 @@ export function ServicesDirectoryClient() {
             onClick={() => setFilterAndHash("utilities")}
             aria-pressed={filter === "utilities"}
             className={`px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-[15px] font-bold border-r border-line transition-colors cursor-pointer min-h-[44px] sm:min-h-[48px] ${
-              filter === "utilities" ? "bg-ink text-on-dark" : "bg-transparent text-ink hover:bg-stone/40"
+              filter === "utilities" ? "bg-signal text-ink shadow-xs" : "bg-transparent text-ink hover:bg-emerald-50"
             }`}
           >
             Energy &amp; Utilities (4)
@@ -94,7 +94,7 @@ export function ServicesDirectoryClient() {
             onClick={() => setFilterAndHash("finance")}
             aria-pressed={filter === "finance"}
             className={`px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-[15px] font-bold border-r border-line transition-colors cursor-pointer min-h-[44px] sm:min-h-[48px] ${
-              filter === "finance" ? "bg-ink text-on-dark" : "bg-transparent text-ink hover:bg-stone/40"
+              filter === "finance" ? "bg-signal text-ink shadow-xs" : "bg-transparent text-ink hover:bg-emerald-50"
             }`}
           >
             Finance &amp; Card Machines (2)
@@ -104,7 +104,7 @@ export function ServicesDirectoryClient() {
             onClick={() => setFilterAndHash("digital")}
             aria-pressed={filter === "digital"}
             className={`px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-[15px] font-bold transition-colors cursor-pointer min-h-[44px] sm:min-h-[48px] ${
-              filter === "digital" ? "bg-ink text-on-dark" : "bg-transparent text-ink hover:bg-stone/40"
+              filter === "digital" ? "bg-signal text-ink shadow-xs" : "bg-transparent text-ink hover:bg-emerald-50"
             }`}
           >
             Digital Marketing (4)

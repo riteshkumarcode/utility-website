@@ -43,11 +43,11 @@ export function Button({
 
   const variantStyles = {
     primary:
-      "bg-ink text-on-dark hover:bg-signal hover:text-ink active:bg-signal",
+      "bg-signal text-ink font-extrabold hover:bg-[#00ea94] active:bg-[#00bd78] shadow-sm hover:shadow-md hover:shadow-emerald-500/20",
     signal:
-      "bg-signal text-ink hover:bg-ink hover:text-on-dark active:bg-ink",
+      "bg-gradient-to-r from-emerald-400 to-cyan-400 text-ink font-extrabold hover:from-emerald-300 hover:to-cyan-300 shadow-md",
     outline:
-      "border-[1.5px] border-ink bg-transparent text-ink hover:bg-ink hover:text-on-dark active:bg-ink",
+      "border-[1.5px] border-emerald-600 bg-white text-emerald-950 hover:bg-emerald-50 active:bg-emerald-100",
   }[variant];
 
   const combinedClasses = `${baseStyles} ${sizeStyles} ${variantStyles} ${className}`;

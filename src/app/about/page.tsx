@@ -112,33 +112,33 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Three Rules We Don't Bend (Ink dark section) */}
-      <section className="bg-ink text-on-dark my-10 sm:my-16">
+      {/* Three Rules We Don't Bend (Bright Modern Section) */}
+      <section className="bg-gradient-to-br from-emerald-50/70 via-white to-cyan-50/60 border-y border-emerald-100 text-ink my-10 sm:my-16">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-12 sm:py-20 md:py-24">
-          <SectionLabel light>How We Work</SectionLabel>
-          <h2 className="font-display font-extrabold text-2xl sm:text-4xl md:text-6xl tracking-[-0.03em] leading-tight mt-3 m-0 max-w-2xl break-words">
+          <SectionLabel>How We Work</SectionLabel>
+          <h2 className="font-display font-extrabold text-2xl sm:text-4xl md:text-6xl tracking-[-0.03em] leading-tight mt-3 m-0 max-w-2xl text-ink break-words">
             Three rules we don&apos;t bend.
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 mt-10 sm:mt-16 border-t border-line-dark pt-8 sm:pt-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 mt-10 sm:mt-16 border-t border-emerald-200/80 pt-8 sm:pt-10">
             <div className="space-y-3">
-              <div className="font-display font-extrabold text-5xl sm:text-6xl text-signal leading-none">01</div>
-              <h3 className="font-display font-bold text-xl sm:text-2xl text-on-dark pt-1">Say what it costs.</h3>
-              <p className="text-sm md:text-base text-[#C9CBC4] leading-relaxed m-0">
+              <div className="font-mono text-sm sm:text-base font-extrabold text-emerald-700 bg-emerald-100/80 px-2.5 py-1 rounded-[4px] w-fit border border-emerald-200">01</div>
+              <h3 className="font-display font-bold text-xl sm:text-2xl text-ink pt-1">Say what it costs.</h3>
+              <p className="text-sm md:text-base text-ink-2 leading-relaxed m-0">
                 Our commission on energy and our fees for marketing are written down before you agree to anything. No mystery charges.
               </p>
             </div>
             <div className="space-y-3">
-              <div className="font-display font-extrabold text-5xl sm:text-6xl text-signal leading-none">02</div>
-              <h3 className="font-display font-bold text-xl sm:text-2xl text-on-dark pt-1">No pressure on the phone.</h3>
-              <p className="text-sm md:text-base text-[#C9CBC4] leading-relaxed m-0">
+              <div className="font-mono text-sm sm:text-base font-extrabold text-emerald-700 bg-emerald-100/80 px-2.5 py-1 rounded-[4px] w-fit border border-emerald-200">02</div>
+              <h3 className="font-display font-bold text-xl sm:text-2xl text-ink pt-1">No pressure on the phone.</h3>
+              <p className="text-sm md:text-base text-ink-2 leading-relaxed m-0">
                 No &quot;this price ends at 5pm today&quot;. If a quote is genuinely good, it will still make sense after you&apos;ve slept on it.
               </p>
             </div>
             <div className="space-y-3">
-              <div className="font-display font-extrabold text-5xl sm:text-6xl text-signal leading-none">03</div>
-              <h3 className="font-display font-bold text-xl sm:text-2xl text-on-dark pt-1">Report the bad months too.</h3>
-              <p className="text-sm md:text-base text-[#C9CBC4] leading-relaxed m-0">
+              <div className="font-mono text-sm sm:text-base font-extrabold text-emerald-700 bg-emerald-100/80 px-2.5 py-1 rounded-[4px] w-fit border border-emerald-200">03</div>
+              <h3 className="font-display font-bold text-xl sm:text-2xl text-ink pt-1">Report the bad months too.</h3>
+              <p className="text-sm md:text-base text-ink-2 leading-relaxed m-0">
                 If an ad campaign underperforms or a supplier dispute drags out, you&apos;ll hear it from us first — along with our plan to resolve it.
               </p>
             </div>
@@ -195,11 +195,11 @@ export default function AboutPage() {
 
       {/* Closing CTA Band */}
       <section className="max-w-[1280px] mx-auto px-4 sm:px-6 py-8 sm:py-12">
-        <div className="bg-signal rounded-[6px] p-6 sm:p-10 md:p-14 flex flex-wrap justify-between items-center gap-6 sm:gap-8 text-ink">
-          <h2 className="font-display font-extrabold text-2xl sm:text-4xl md:text-5xl tracking-[-0.03em] leading-tight m-0 max-w-2xl break-words">
+        <div className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 rounded-[6px] p-6 sm:p-10 md:p-14 flex flex-wrap justify-between items-center gap-6 sm:gap-8 text-ink shadow-lg shadow-emerald-500/20">
+          <h2 className="font-display font-extrabold text-2xl sm:text-4xl md:text-5xl tracking-[-0.03em] leading-tight m-0 max-w-2xl break-words text-ink">
             Come and say hello. Kettle&apos;s on.
           </h2>
-          <Button variant="primary" href="/contact" size="large" className="w-full sm:w-auto text-center">
+          <Button variant="outline" href="/contact" size="large" className="w-full sm:w-auto text-center bg-white text-emerald-950 hover:bg-emerald-50 border-white shadow-md font-extrabold">
             Get in touch
           </Button>
         </div>

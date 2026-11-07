@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Chip } from "@/components/ui/Chip";
@@ -25,16 +26,17 @@ export function StyleGuideClient() {
   };
 
   const colors = [
-    { token: "--paper", hex: "#F1F1EC", label: "Page background", bg: "bg-[#F1F1EC]", text: "text-ink" },
-    { token: "--paper-2", hex: "#F8F8F4", label: "Raised panels, cards, form box", bg: "bg-[#F8F8F4]", text: "text-ink" },
-    { token: "--stone", hex: "#E4E4DC", label: "Soft panel (\"What we'll need\")", bg: "bg-[#E4E4DC]", text: "text-ink" },
-    { token: "--ink", hex: "#121512", label: "Text, dark sections, primary buttons", bg: "bg-[#121512]", text: "text-on-dark" },
-    { token: "--ink-2", hex: "#3C413B", label: "Body text on paper", bg: "bg-[#3C413B]", text: "text-on-dark" },
-    { token: "--muted", hex: "#5B605A", label: "Labels, captions", bg: "bg-[#5B605A]", text: "text-on-dark" },
-    { token: "--line", hex: "#C9C9BF", label: "Hairline rules", bg: "bg-[#C9C9BF]", text: "text-ink" },
-    { token: "--line-dark", hex: "#2B302B", label: "Rules on dark sections", bg: "bg-[#2B302B]", text: "text-on-dark" },
-    { token: "--signal", hex: "#FF5B1F", label: "Accent fills, CTA band, active marks", bg: "bg-[#FF5B1F]", text: "text-ink" },
-    { token: "--rust", hex: "#B23A0B", label: "Link hover, small numbers on paper", bg: "bg-[#B23A0B]", text: "text-on-dark" },
+    { token: "--paper", hex: "#FFFFFF", label: "Page background", bg: "bg-[#FFFFFF]", text: "text-ink" },
+    { token: "--paper-2", hex: "#F8FAFC", label: "Raised panels, cards, form box", bg: "bg-[#F8FAFC]", text: "text-ink" },
+    { token: "--stone", hex: "#F0FDF4", label: "Soft panel, mint accent", bg: "bg-[#F0FDF4]", text: "text-ink" },
+    { token: "--ink", hex: "#0F172A", label: "Text, dark sections, primary buttons", bg: "bg-[#0F172A]", text: "text-on-dark" },
+    { token: "--ink-2", hex: "#334155", label: "Body text on paper", bg: "bg-[#334155]", text: "text-on-dark" },
+    { token: "--muted", hex: "#64748B", label: "Labels, captions", bg: "bg-[#64748B]", text: "text-on-dark" },
+    { token: "--line", hex: "#E2E8F0", label: "Hairline rules", bg: "bg-[#E2E8F0]", text: "text-ink" },
+    { token: "--line-dark", hex: "#1E293B", label: "Rules on dark sections", bg: "bg-[#1E293B]", text: "text-on-dark" },
+    { token: "--signal", hex: "#00D084", label: "Electric Emerald primary accent, CTA, buttons", bg: "bg-[#00D084]", text: "text-ink" },
+    { token: "--cyan", hex: "#06B6D4", label: "Energetic Cyan secondary accent", bg: "bg-[#06B6D4]", text: "text-ink" },
+    { token: "--rust", hex: "#0891B2", label: "Link hover, small numbers on paper", bg: "bg-[#0891B2]", text: "text-on-dark" },
   ];
 
   return (
@@ -402,37 +404,21 @@ export function StyleGuideClient() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Logo Needle & Odometer */}
+            {/* Brand Logo & Telemetry */}
             <div className="bg-ink text-on-dark rounded-[6px] p-6 space-y-6">
               <div className="flex justify-between items-center border-b border-line-dark pb-4">
                 <div className="flex items-center gap-3">
-                  {/* SVG Meter Logo */}
-                  <svg width="34" height="34" viewBox="0 0 24 24" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10" fill="none" stroke="#F1F1EC" strokeWidth="2.4" />
-                    <path
-                      d="M5.5 15.5a7 7 0 0 1 13 0"
-                      fill="none"
-                      stroke="#F1F1EC"
-                      strokeWidth="1.2"
-                      strokeDasharray="1.2 1.6"
-                    />
-                    <line
-                      className="animate-sway"
-                      x1="12"
-                      y1="13"
-                      x2="16.5"
-                      y2="8"
-                      stroke="#FF5B1F"
-                      strokeWidth="2.4"
-                      strokeLinecap="round"
-                    />
-                    <circle cx="12" cy="13" r="1.8" fill="#F1F1EC" />
-                  </svg>
-                  <span className="font-display font-black text-2xl tracking-[-0.035em]">West Coast Services</span>
+                  <Image
+                    src="/images/logo/wcs-horizontal-white.svg"
+                    alt="West Coast Services"
+                    width={220}
+                    height={45}
+                    className="h-10 w-auto"
+                  />
                 </div>
                 <div className="flex items-center gap-2 font-mono text-xs uppercase text-[#8B8F86]">
                   <span className="w-1.5 h-1.5 rounded-full bg-signal animate-blink" />
-                  Live reading
+                  Official Logo
                 </div>
               </div>
 

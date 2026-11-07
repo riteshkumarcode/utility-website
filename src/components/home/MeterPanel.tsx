@@ -26,36 +26,36 @@ export function MeterPanel() {
 
   return (
     <div className="flex flex-col gap-3.5 w-full">
-      {/* Dark Industrial Meter Console Graphic */}
+      {/* High-Tech Industrial Meter Console Graphic */}
       <motion.div
         initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: [0.2, 0.7, 0.2, 1] }}
-        className="bg-ink text-on-dark rounded-[6px] p-4 sm:p-6 shadow-xl border border-line-dark overflow-hidden relative"
+        className="bg-[#0B1512] text-on-dark rounded-[6px] p-4 sm:p-6 shadow-xl border border-emerald-500/30 overflow-hidden relative"
       >
         {/* Subtle grid pattern background */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 opacity-[0.03] pointer-events-none"
+          className="absolute inset-0 opacity-[0.05] pointer-events-none"
           style={{
             backgroundImage:
-              "linear-gradient(#F1F1EC 1px, transparent 1px), linear-gradient(90deg, #F1F1EC 1px, transparent 1px)",
+              "linear-gradient(#00D084 1px, transparent 1px), linear-gradient(90deg, #00D084 1px, transparent 1px)",
             backgroundSize: "20px 20px",
           }}
         />
 
         {/* Top Header Telemetry Bar */}
-        <div className="flex justify-between items-center font-mono text-[11px] uppercase tracking-[0.12em] text-[#8B8F86] pb-3 border-b border-line-dark/80">
+        <div className="flex justify-between items-center font-mono text-[11px] uppercase tracking-[0.12em] text-[#8B8F86] pb-3 border-b border-emerald-900/60">
           <div className="flex items-center gap-2">
             <span className="font-bold text-on-dark">{siteConfig.name}</span>
-            <span className="text-line-dark">/</span>
-            <span className="text-[#A6AAA0]">Meter 01 · Main</span>
+            <span className="text-emerald-800">/</span>
+            <span className="text-emerald-200/70">Meter 01 · Main</span>
           </div>
 
           <div className="flex items-center gap-2">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-signal opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-signal" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-signal shadow-[0_0_8px_#00D084]" />
             </span>
             <span className="text-on-dark font-medium">{meterPanel.readingStatus}</span>
           </div>
@@ -67,12 +67,12 @@ export function MeterPanel() {
             aria-hidden="true"
             className="font-mono font-medium text-2xl sm:text-4xl md:text-[46px] flex gap-0.5 sm:gap-1 items-baseline select-none overflow-x-auto py-1"
           >
-            <span className="bg-[#1E221E] px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-[3px] border border-line-dark/60">0</span>
-            <span className="bg-[#1E221E] px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-[3px] border border-line-dark/60">4</span>
-            <span className="bg-[#1E221E] px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-[3px] border border-line-dark/60">8</span>
+            <span className="bg-[#12241C] text-emerald-100 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-[3px] border border-emerald-900/60">0</span>
+            <span className="bg-[#12241C] text-emerald-100 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-[3px] border border-emerald-900/60">4</span>
+            <span className="bg-[#12241C] text-emerald-100 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-[3px] border border-emerald-900/60">8</span>
 
             {/* Slow column 3 (220s) */}
-            <span className="bg-[#1E221E] px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-[3px] h-[1.3em] overflow-hidden inline-block align-top border border-line-dark/60">
+            <span className="bg-[#12241C] text-emerald-100 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-[3px] h-[1.3em] overflow-hidden inline-block align-top border border-emerald-900/60">
               <span className="flex flex-col [animation:roll_220s_steps(10)_infinite]">
                 {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
                   <span key={n}>{n}</span>
@@ -81,7 +81,7 @@ export function MeterPanel() {
             </span>
 
             {/* Medium column 2 (22s) */}
-            <span className="bg-[#1E221E] px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-[3px] h-[1.3em] overflow-hidden inline-block align-top border border-line-dark/60">
+            <span className="bg-[#12241C] text-emerald-100 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-[3px] h-[1.3em] overflow-hidden inline-block align-top border border-emerald-900/60">
               <span className="flex flex-col [animation:roll_22s_steps(10)_infinite]">
                 {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
                   <span key={n}>{n}</span>
@@ -89,8 +89,8 @@ export function MeterPanel() {
               </span>
             </span>
 
-            {/* Fast column 1 (2.2s) in Signal Orange */}
-            <span className="bg-signal text-ink px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-[3px] h-[1.3em] overflow-hidden inline-block align-top font-bold shadow-sm">
+            {/* Fast column 1 (2.2s) in Signal Emerald */}
+            <span className="bg-signal text-ink px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-[3px] h-[1.3em] overflow-hidden inline-block align-top font-bold shadow-[0_0_10px_#00D084]">
               <span className="flex flex-col [animation:roll_2.2s_steps(10)_infinite]">
                 {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
                   <span key={n}>{n}</span>
@@ -98,21 +98,21 @@ export function MeterPanel() {
               </span>
             </span>
 
-            <span className="text-xs sm:text-base text-[#8B8F86] ml-1.5 font-mono">kWh</span>
+            <span className="text-xs sm:text-base text-emerald-400 ml-1.5 font-mono">kWh</span>
           </div>
 
           <div className="text-right font-mono text-[11px] text-[#8B8F86] shrink-0">
             <span className="block text-signal font-bold">{gridFreq} Hz</span>
-            <span className="text-[10px] text-[#A6AAA0]">Grid Balanced</span>
+            <span className="text-[10px] text-emerald-300/80">Grid Balanced</span>
           </div>
         </div>
 
         {/* Live Energy Waveform Graphic with Animated Motion */}
-        <div className="mt-4 p-2.5 rounded-[4px] bg-[#161A16] border border-line-dark/80 relative overflow-hidden">
+        <div className="mt-4 p-2.5 rounded-[4px] bg-[#0E1F18] border border-emerald-900/60 relative overflow-hidden">
           <div className="flex justify-between items-center text-[10px] font-mono text-[#8B8F86] mb-1.5 px-1">
             <span className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-signal/80" />
-              <span>Telemetry Waveform</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-signal" />
+              <span className="text-emerald-200/80">Telemetry Waveform</span>
             </span>
             <span className="text-signal font-semibold tracking-wider">LIVE TELEMETRY</span>
           </div>
@@ -127,21 +127,21 @@ export function MeterPanel() {
             >
               <defs>
                 <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#FF5B1F" stopOpacity="0.2" />
-                  <stop offset="50%" stopColor="#FF5B1F" stopOpacity="1" />
-                  <stop offset="100%" stopColor="#FF5B1F" stopOpacity="0.5" />
+                  <stop offset="0%" stopColor="#00D084" stopOpacity="0.3" />
+                  <stop offset="50%" stopColor="#00D084" stopOpacity="1" />
+                  <stop offset="100%" stopColor="#06B6D4" stopOpacity="0.9" />
                 </linearGradient>
                 <linearGradient id="waveFill" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stopColor="#FF5B1F" stopOpacity="0.2" />
-                  <stop offset="100%" stopColor="#FF5B1F" stopOpacity="0" />
+                  <stop offset="0%" stopColor="#00D084" stopOpacity="0.25" />
+                  <stop offset="100%" stopColor="#00D084" stopOpacity="0" />
                 </linearGradient>
               </defs>
 
               {/* Grid rules */}
-              <line x1="0" y1="28" x2="340" y2="28" stroke="#2B302B" strokeDasharray="3 3" strokeWidth="1" />
-              <line x1="85" y1="0" x2="85" y2="56" stroke="#2B302B" strokeDasharray="2 4" strokeWidth="0.8" />
-              <line x1="170" y1="0" x2="170" y2="56" stroke="#2B302B" strokeDasharray="2 4" strokeWidth="0.8" />
-              <line x1="255" y1="0" x2="255" y2="56" stroke="#2B302B" strokeDasharray="2 4" strokeWidth="0.8" />
+              <line x1="0" y1="28" x2="340" y2="28" stroke="#16382A" strokeDasharray="3 3" strokeWidth="1" />
+              <line x1="85" y1="0" x2="85" y2="56" stroke="#16382A" strokeDasharray="2 4" strokeWidth="0.8" />
+              <line x1="170" y1="0" x2="170" y2="56" stroke="#16382A" strokeDasharray="2 4" strokeWidth="0.8" />
+              <line x1="255" y1="0" x2="255" y2="56" stroke="#16382A" strokeDasharray="2 4" strokeWidth="0.8" />
 
               {/* Sine Wave Filled Area */}
               <motion.path
@@ -186,7 +186,7 @@ export function MeterPanel() {
               {!shouldReduceMotion && (
                 <motion.circle
                   r="3.5"
-                  fill="#FF5B1F"
+                  fill="#00D084"
                   animate={{
                     cx: [20, 100, 200, 320, 20],
                     cy: [20, 28, 20, 28, 20],
@@ -200,7 +200,7 @@ export function MeterPanel() {
         </div>
 
         {/* 4 Utility Progress Bars with Staggered Motion */}
-        <div className="border-t border-line-dark mt-4 pt-3.5 space-y-2.5 text-sm">
+        <div className="border-t border-emerald-900/60 mt-4 pt-3.5 space-y-2.5 text-sm">
           {meterPanel.bars.map((bar, idx) => {
             const isHovered = activeTab === idx;
             return (
@@ -209,10 +209,10 @@ export function MeterPanel() {
                 onMouseEnter={() => setActiveTab(idx)}
                 onMouseLeave={() => setActiveTab(null)}
                 className={`flex items-center gap-3 p-1 rounded transition-colors ${
-                  isHovered ? "bg-[#1E221E]" : "bg-transparent"
+                  isHovered ? "bg-[#12241C]" : "bg-transparent"
                 }`}
               >
-                <span className="w-20 text-[#C9CBC4] text-xs sm:text-sm shrink-0 font-medium">
+                <span className="w-20 text-emerald-100/90 text-xs sm:text-sm shrink-0 font-medium">
                   {bar.name}
                 </span>
 

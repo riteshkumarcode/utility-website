@@ -28,9 +28,9 @@ export function Testimonial() {
             width="44"
             height="44"
             viewBox="0 0 24 24"
-            fill="#FF5B1F"
+            fill="#00D084"
             aria-hidden="true"
-            className="shrink-0"
+            className="shrink-0 drop-shadow-[0_2px_8px_rgba(0,208,132,0.3)]"
           >
             <path d="M3 11h6v8H3zM3 11c0-4 2-6 6-7M13 11h6v8h-6zM13 11c0-4 2-6 6-7" />
           </svg>

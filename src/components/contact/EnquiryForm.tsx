@@ -208,10 +208,10 @@ export function EnquiryForm() {
                 type="button"
                 aria-pressed={isPicked}
                 onClick={() => handleToggleService(opt.slug)}
-                className={`inline-flex items-center justify-center rounded-full border px-4 py-2.5 font-semibold text-sm md:text-base min-h-[44px] transition-all cursor-pointer ${
+                className={`inline-flex items-center justify-center rounded-full border px-4 py-2.5 font-bold text-sm md:text-base min-h-[44px] transition-all cursor-pointer ${
                   isPicked
-                    ? "bg-ink text-on-dark border-ink"
-                    : "bg-transparent text-ink border-[#B9B9AE] hover:border-ink"
+                    ? "bg-signal text-ink border-signal shadow-xs"
+                    : "bg-transparent text-ink border-line hover:border-emerald-500 hover:bg-emerald-50/50"
                 }`}
               >
                 {opt.label}
